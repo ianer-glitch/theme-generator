@@ -4,7 +4,8 @@ import Buttons from "@/components/buttons/Buttons.vue";
 import Forms from "@/components/forms/Forms.vue";
 import Pickers from "@/components/pickers/Pickers.vue";
 import Data from "@/components/data/Data.vue";
-import templateCss from "@/assets/template.js"
+import templateCss from "@/assets/template.js";
+import Fonts from "@/components/fonts/fonts.vue"
 const name = "HomeView";
 export default defineComponent({
   name,
@@ -14,6 +15,7 @@ export default defineComponent({
     Data: Data as any,
     Forms: Forms as any,
     Pickers: Pickers as any,
+    Fonts : Fonts as any,
   },
 
   props: {},
@@ -104,59 +106,61 @@ export default defineComponent({
 
 <template>
   <main class="content">
-    <div class="primary">
-      <Pickers 
-        @dataTableHeaderColor                          = " dataTableHeaderColor = $event "
-        @generalBackgroundColor                        = " generalBackgroundColor = $event "
-        @generalBoxShadowColor                         = " generalBoxShadowColor = $event "
-        @generalInputBorderColor                       = " generalInputBorderColor = $event "
-        @generalInputItensColor                        = " generalInputItensColor = $event "
-        @generalTextInInputColor                       = " generalTextInInputColor = $event "
-        @inputDetailsAndGridLinesColor                 = " inputDetailsAndGridLinesColor =  $event "
-        @pButtonActiveAndFocusBackgroundColor          = " pButtonActiveAndFocusBackgroundColor = $event "
-        @pButtonBackgroundColorAndGeneralInputColor    = " pButtonBackgroundColorAndGeneralInputColor = $event "
-        @pButtonDangerActiveAndFocusBackgroundColor    = " pButtonDangerActiveAndFocusBackgroundColor = $event "
-        @pButtonDangerActiveAndFocusBorderColor        = " pButtonDangerActiveAndFocusBorderColor = $event "
-        @pButtonDangerBackgroundColor                  = " pButtonDangerBackgroundColor = $event "
-        @pButtonDangerHoverBackgroundColor             = " pButtonDangerHoverBackgroundColor = $event "
-        @pButtonHelpActiveAndFocusBackgroundColor      = " pButtonHelpActiveAndFocusBackgroundColor = $event "
-        @pButtonHelpActiveAndFocusBorderColor          = " pButtonHelpActiveAndFocusBorderColor = $event "
-        @pButtonHelpBackgroundColor                    = " pButtonHelpBackgroundColor = $event "
-        @pButtonHelpHoverBackgroundColor               = " pButtonHelpHoverBackgroundColor = $event "
-        @pButtonHoverBackgroundColor                   = " pButtonHoverBackgroundColor = $event "
-        @pButtonInfoActiveAndFocusBackgroundColor      = " pButtonInfoActiveAndFocusBackgroundColor = $event "
-        @pButtonInfoBackgroundColor                    = " pButtonInfoBackgroundColor = $event "
-        @pButtonInfoHoverBackgroundColor               = " pButtonInfoHoverBackgroundColor = $event "
-        @pButtonOutlinedActiveAndFocusBackgroundColor  = " pButtonOutlinedActiveAndFocusBackgroundColor = $event "
-        @pButtonOutlinedHoverBackgroundcolor           = " pButtonOutlinedHoverBackgroundcolor = $event "
-        @pButtonRaisedBoxshadowDown                    = " pButtonRaisedBoxshadowDown = $event "
-        @pButtonRaisedBoxshadowUp                      = " pButtonRaisedBoxshadowUp = $event "
-        @pButtonSecondaryActiveAndFocusBackgroundColor = " pButtonSecondaryActiveAndFocusBackgroundColor = $event "
-        @pButtonSucessActiveAndFocusBorderColor     = " pButtonSucessActiveAndFocusBorderColor = $event "
-        @pButtonSecondaryBackgroundColor               = " pButtonSecondaryBackgroundColor = $event "
-        @pButtonSecondaryHoverBackgroundColor          = " pButtonSecondaryHoverBackgroundColor = $event "
-        @pButtonSucessActiveAndFocusBackgroundColor    = " pButtonSucessActiveAndFocusBackgroundColor = $event "
-        @pButtonSucessBackgroundColor                  = " pButtonSucessBackgroundColor = $event "
-        @pButtonSucessHoverBackgroundColor             = " pButtonSucessHoverBackgroundColor = $event "
-        @pButtonTextActiveAndFocusBackgroundColor      = " pButtonTextActiveAndFocusBackgroundColor = $event "
-        @pButtonTextHoverBackgroundColor               = " pButtonTextHoverBackgroundColor = $event "
-        @pButtonWarningActiveAndFocusBackgroundColor   = " pButtonWarningActiveAndFocusBackgroundColor = $event "
-        @pButtonWarningActiveAndFocusBorderColor       = " pButtonWarningActiveAndFocusBorderColor = $event "
-        @pButtonWarningBackgroundColor                 = " pButtonWarningBackgroundColor = $event "
-        @pButtonWarningHoverBackgroundColor            = " pButtonWarningHoverBackgroundColor = $event "
-        @pButtonWarningTextColor                       = " pButtonWarningTextColor = $event "
-        @pDividerColor                                 = " pDividerColor = $event "
-      />
-      
+    <div class="content-container">
+      <div class="primary">
+        <Pickers 
+          @dataTableHeaderColor                          = " dataTableHeaderColor = $event "
+          @generalBackgroundColor                        = " generalBackgroundColor = $event "
+          @generalBoxShadowColor                         = " generalBoxShadowColor = $event "
+          @generalInputBorderColor                       = " generalInputBorderColor = $event "
+          @generalInputItensColor                        = " generalInputItensColor = $event "
+          @generalTextInInputColor                       = " generalTextInInputColor = $event "
+          @inputDetailsAndGridLinesColor                 = " inputDetailsAndGridLinesColor =  $event "
+          @pButtonActiveAndFocusBackgroundColor          = " pButtonActiveAndFocusBackgroundColor = $event "
+          @pButtonBackgroundColorAndGeneralInputColor    = " pButtonBackgroundColorAndGeneralInputColor = $event "
+          @pButtonDangerActiveAndFocusBackgroundColor    = " pButtonDangerActiveAndFocusBackgroundColor = $event "
+          @pButtonDangerActiveAndFocusBorderColor        = " pButtonDangerActiveAndFocusBorderColor = $event "
+          @pButtonDangerBackgroundColor                  = " pButtonDangerBackgroundColor = $event "
+          @pButtonDangerHoverBackgroundColor             = " pButtonDangerHoverBackgroundColor = $event "
+          @pButtonHelpActiveAndFocusBackgroundColor      = " pButtonHelpActiveAndFocusBackgroundColor = $event "
+          @pButtonHelpActiveAndFocusBorderColor          = " pButtonHelpActiveAndFocusBorderColor = $event "
+          @pButtonHelpBackgroundColor                    = " pButtonHelpBackgroundColor = $event "
+          @pButtonHelpHoverBackgroundColor               = " pButtonHelpHoverBackgroundColor = $event "
+          @pButtonHoverBackgroundColor                   = " pButtonHoverBackgroundColor = $event "
+          @pButtonInfoActiveAndFocusBackgroundColor      = " pButtonInfoActiveAndFocusBackgroundColor = $event "
+          @pButtonInfoBackgroundColor                    = " pButtonInfoBackgroundColor = $event "
+          @pButtonInfoHoverBackgroundColor               = " pButtonInfoHoverBackgroundColor = $event "
+          @pButtonOutlinedActiveAndFocusBackgroundColor  = " pButtonOutlinedActiveAndFocusBackgroundColor = $event "
+          @pButtonOutlinedHoverBackgroundcolor           = " pButtonOutlinedHoverBackgroundcolor = $event "
+          @pButtonRaisedBoxshadowDown                    = " pButtonRaisedBoxshadowDown = $event "
+          @pButtonRaisedBoxshadowUp                      = " pButtonRaisedBoxshadowUp = $event "
+          @pButtonSecondaryActiveAndFocusBackgroundColor = " pButtonSecondaryActiveAndFocusBackgroundColor = $event "
+          @pButtonSucessActiveAndFocusBorderColor     = " pButtonSucessActiveAndFocusBorderColor = $event "
+          @pButtonSecondaryBackgroundColor               = " pButtonSecondaryBackgroundColor = $event "
+          @pButtonSecondaryHoverBackgroundColor          = " pButtonSecondaryHoverBackgroundColor = $event "
+          @pButtonSucessActiveAndFocusBackgroundColor    = " pButtonSucessActiveAndFocusBackgroundColor = $event "
+          @pButtonSucessBackgroundColor                  = " pButtonSucessBackgroundColor = $event "
+          @pButtonSucessHoverBackgroundColor             = " pButtonSucessHoverBackgroundColor = $event "
+          @pButtonTextActiveAndFocusBackgroundColor      = " pButtonTextActiveAndFocusBackgroundColor = $event "
+          @pButtonTextHoverBackgroundColor               = " pButtonTextHoverBackgroundColor = $event "
+          @pButtonWarningActiveAndFocusBackgroundColor   = " pButtonWarningActiveAndFocusBackgroundColor = $event "
+          @pButtonWarningActiveAndFocusBorderColor       = " pButtonWarningActiveAndFocusBorderColor = $event "
+          @pButtonWarningBackgroundColor                 = " pButtonWarningBackgroundColor = $event "
+          @pButtonWarningHoverBackgroundColor            = " pButtonWarningHoverBackgroundColor = $event "
+          @pButtonWarningTextColor                       = " pButtonWarningTextColor = $event "
+          @pDividerColor                                 = " pDividerColor = $event "
+        />
+        <Fonts/>
+      </div>
       <div class="secondary">
         <Forms />
         <Buttons />
       </div>
     </div>
-    <Data />
-    <div class="float-export" @click="exportCss">
-      <i class="pi pi-download"></i>
-    </div>
+      <Data />
+      <div class="float-export" @click="exportCss">
+        <i class="pi pi-download"></i>
+      </div>
   </main>
 </template>
 
@@ -183,15 +187,21 @@ export default defineComponent({
   display: flex;
   height: 100%;
   width: 100%;
-  column-gap: 10%;
+  gap:30px;
   flex-direction: column;
 }
-
+.content-container{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  gap:30px;
+}
 .primary{
   display: flex;
   width: 100%;
   gap:30px;
   margin-bottom: 15px;
+  flex-direction: column;
  
 }
 .secondary{

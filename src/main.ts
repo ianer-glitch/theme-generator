@@ -34,6 +34,7 @@ import Toast from "primevue/toast";
 import ToastService from "primevue/toastservice";
 import Tree from "primevue/tree";
 import Divider from 'primevue/divider';
+import Knob from 'primevue/knob';
 
 import Panel from 'primevue/panel';
 
@@ -74,5 +75,6 @@ app.component("PTree", Tree);
 app.component("VMultiSelect", MultiSelect);
 app.component("PDivider", Divider);
 app.component("PPanel", Panel );
+app.component("PKnob",Knob);
 
 app.mount("#app");

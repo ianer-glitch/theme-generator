@@ -230,7 +230,7 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   height: fit-content;
-  width: 80%;
+  width: 100%;
 
 }
 
