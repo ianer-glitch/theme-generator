@@ -46,7 +46,7 @@ export default defineComponent({
       const result = tempLabel.replace(/([A-Z])/g ," $1")
       const finalResult = result.charAt(0).toUpperCase() + result.slice(1)
       return finalResult
-    }
+    },
   },
 
   updated() {
@@ -67,8 +67,9 @@ export default defineComponent({
   <main class="color-picker">
     <p>{{returnLabel()}}</p> 
     <div class="input-group">
-        <PInputText @change="emitText" :placeholder="defaultColor" class="input" v-model="color"/>
-        <PColorPicker  v-model="color" @change="$emit('change', `#${color}`)"/>
+      <PInputText @change="emitText" :placeholder="defaultColor" class="input" v-model="color"/>
+      <PButton @click="color = defaultColor ; $emit('change', `${color}`)" icon="pi pi-refresh" class="p-button-rounded p-button-secondary p-button-text" />
+       <PColorPicker  v-model="color" @change="$emit('change', `#${color}`)"/>
     </div>
     
   </main>
@@ -90,9 +91,7 @@ export default defineComponent({
   width:fit-content;
     
 }
-.button{
-  height: fit-content;
-}
+
 .input{
   width: 100%;
 }
