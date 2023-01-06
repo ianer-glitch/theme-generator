@@ -40,6 +40,7 @@ const templateCss = `
   --teste-15: $pButtonRaisedBoxshadowUp$;
   --teste-14: $pButtonRaisedBoxshadowDown$;
   --teste-18: $dataTableHeaderColor$;
+  --teste-2 : $pInvalidColor$;
   --teste-68: #044868;
   --teste-67: #0891cf;
   --teste-22: #191919;
@@ -60,7 +61,6 @@ const templateCss = `
   --teste-76: #e60017;
   --teste-25: #e74c3c;
   --teste-87: #f2f2f2;
-  --teste-2 : #f44336;
   --teste-61: #fcfcfc;
   --teste-75: #FFCDD2;
   --teste-72: #FFECB3;

@@ -94,6 +94,7 @@ export default defineComponent({
       pButtonWarningHoverBackgroundColor           : null,
       pButtonWarningTextColor                      : null,
       pDividerColor                                : null,
+      pInvalidColor                                : null,
     };
   },
 
@@ -149,7 +150,8 @@ export default defineComponent({
           @pButtonWarningHoverBackgroundColor            = " pButtonWarningHoverBackgroundColor = $event "
           @pButtonWarningTextColor                       = " pButtonWarningTextColor = $event "
           @pDividerColor                                 = " pDividerColor = $event "
-        />
+          @pInvalidColor                                 = " pInvalidColor = $event "
+          />
         <Fonts/>
       </div>
       <div class="secondary">
@@ -256,6 +258,7 @@ export default defineComponent({
   --teste-15:v-bind('pButtonRaisedBoxshadowUp');
   --teste-14:v-bind('pButtonRaisedBoxshadowDown');
   --teste-18: v-bind('dataTableHeaderColor');
+  --teste-2 : v-bind('pInvalidColor');
   --teste-68: #044868;
   --teste-67: #0891cf;
   --teste-22: #191919;
@@ -276,7 +279,6 @@ export default defineComponent({
   --teste-76: #e60017;
   --teste-25: #e74c3c;
   --teste-87: #f2f2f2;
-  --teste-2 : #f44336;
   --teste-61: #fcfcfc;
   --teste-75: #FFCDD2;
   --teste-72: #FFECB3;

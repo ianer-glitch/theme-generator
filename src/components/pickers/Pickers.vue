@@ -101,8 +101,10 @@ export default defineComponent({
         inputDetailsAndGridLinesColor                : '#e9ecef',
         dataTableHeaderColor                         : '#f8f9fa',
         pDividerColor                                : '#dee2e6',
-      },
+        pInvalidColor                                : '#f44336',
+      },  
       
+
     };
   },
 
