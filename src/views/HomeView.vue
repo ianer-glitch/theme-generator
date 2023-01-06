@@ -159,10 +159,10 @@ export default defineComponent({
         <Buttons />
       </div>
     </div>
-      <Data />
-      <div class="float-export" @click="exportCss">
-        <i class="pi pi-download"></i>
-      </div>
+    <Data />
+    <div class="float-export" @click="exportCss">
+      <i class="pi pi-download"></i>
+    </div>
   </main>
 </template>
 
