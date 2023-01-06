@@ -41,8 +41,13 @@ export default defineComponent({
           <i class="pi pi-user"></i>
         </span>
         <PInputText placeholder="Username" class="pseudoclass" />
+        
       </div>
-      <PInputMask mask="99-999999" class="pseudoclass" />
+       <div class="last-text-content">
+        <PInputMask mask="99-999999" class="last-text-content-item"  />
+        <PInputMask mask="99-999999" disabled class="last-text-content-item" />
+        <PInputMask mask="99-999999" disabled class="last-text-content-item p-invalid"/>
+      </div>
       <div class="radiobutton-container">
         <PRadioButton v-model="radioButton" value="1" class="pseudoclass-radio active"/>
         <PRadioButton v-model="radioButton" value="2"  class="pseudoclass-radio focus"/>
@@ -106,5 +111,12 @@ export default defineComponent({
   display: flex;
   padding: 10px;
   justify-content: space-between;
+}
+.last-text-content{
+  display:flex;
+  gap:5px;
+}
+.last-text-content-item{
+  width: calc(100%/3);
 }
 </style>

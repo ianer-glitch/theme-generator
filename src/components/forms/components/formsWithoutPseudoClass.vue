@@ -42,7 +42,11 @@ export default defineComponent({
         </span>
         <PInputText placeholder="Username" />
       </div>
-      <PInputMask mask="99-999999" />
+      <div class="last-text-content">
+        <PInputMask mask="99-999999" class="last-text-content-item"/>
+        <PInputMask mask="99-999999" disabled class="last-text-content-item" />
+        <PInputMask mask="99-999999" disabled class="p-invalid last-text-content-item"/>
+      </div>
       <div class="radiobutton-container">
         <PRadioButton v-model="radioButton" value="1" />
         <PRadioButton v-model="radioButton" value="2" />
@@ -76,5 +80,12 @@ export default defineComponent({
   display: flex;
   padding: 10px;
   justify-content: space-between;
+}
+.last-text-content{
+  display:flex;
+  gap:5px;
+}
+.last-text-content-item{
+  width: calc(100%/3);
 }
 </style>
