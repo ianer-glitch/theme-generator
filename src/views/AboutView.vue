@@ -16,15 +16,18 @@ export default defineComponent({
   mounted() {},
 
   methods: {
-
+    teste(e){
+      console.log(e)
+    }
   },
 
   updated() {
-
+    
   },
 
   data() {
     return {
+      need:false,
       value:"",
       components:[
         {
@@ -39,7 +42,7 @@ export default defineComponent({
             'grid-area':"1/1/2/2"
           },
         },
-         {
+        {
           name:"PInputText",
           vmodel:{name:"entrada2",defaultValue:""},
           props:{
@@ -67,7 +70,10 @@ export default defineComponent({
       :lineNumber="1" 
       :columnNumber="2" 
       :components="components" 
-      @entrada-change="value = $event"
+      :needAllData="need"
+      @entrada-change="teste($event)"
+      @all-data="teste($event)"
+      @click="need = !need"
       />
   </main>
 </template>
