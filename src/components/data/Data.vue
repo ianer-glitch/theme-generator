@@ -50,16 +50,16 @@ export default defineComponent({
         <PColumn field="color" header="Color"></PColumn>
     </PDataTable>
     <PDataTable :value="cars" style="width:100%"
-    scrollDirection="horizontal"
-    responsiveLayout="scroll"
-    :rowHover="true"
-    v-model:selection="selectedCustomers"
+      scrollDirection="horizontal"
+      responsiveLayout="scroll"
+      :rowHover="true"
+      v-model:selection="selectedCustomers"
     >
-    <PColumn selectionMode="multiple" headerStyle="width: 3rem"></PColumn>    
-    <PColumn field="vin" header="Vin"></PColumn>
-        <PColumn field="year" header="Year"></PColumn>
-        <PColumn field="brand" header="Brand"></PColumn>
-        <PColumn field="color" header="Color"></PColumn>
+      <PColumn selectionMode="multiple" headerStyle="width: 3rem"></PColumn>    
+      <PColumn field="vin" header="Vin"></PColumn>
+      <PColumn field="year" header="Year"></PColumn>
+      <PColumn field="brand" header="Brand"></PColumn>
+      <PColumn field="color" header="Color"></PColumn>
     </PDataTable>
 
   </main>
