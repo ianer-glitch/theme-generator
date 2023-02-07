@@ -66,10 +66,10 @@ export default defineComponent({
 
 <style scoped>
 :deep(.p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight)){
-  border-color:var(--cor-5); 
+  border-color:var(--cor-90); 
 }
 :deep(.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box){
-    border-color: var(--cor-5);  
+    border-color: var(--cor-90);  
 }
 .pseudoclass{
   border-color: var(--cor-5);

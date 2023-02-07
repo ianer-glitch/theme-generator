@@ -38,7 +38,6 @@ export default defineComponent({
       },
       isCollapsedPButton:true,
       pButton:{
-
         pButtonBackgroundColorAndGeneralInputColor   : '#2196F3',
         pButtonHoverBackgroundColor                  : '#0d89ec',
         pButtonActiveAndFocusBackgroundColor         : '#0b7ad1',

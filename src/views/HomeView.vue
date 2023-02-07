@@ -306,6 +306,8 @@ export default defineComponent({
   --cor-12: rgba(33, 150, 243, 0.24);
   --cor-30: rgba(96, 125, 139, 0.04);
   --cor-89: rgba(96, 125, 139, 0.16);
+  --cor-90:tomato
+  
   
 }
 * {
@@ -914,7 +916,7 @@ export default defineComponent({
   background: var(--cor-5);
 }
 .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
-  border-color: var(--cor-5);
+  border-color: var(--cor-90);
 }
 .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus {
   outline: 0 none;
@@ -1696,7 +1698,7 @@ export default defineComponent({
   transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
 .p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
-  border-color: var(--cor-5);
+  border-color: var(--cor-90);
 }
 .p-radiobutton .p-radiobutton-box:not(.p-disabled).p-focus {
   outline: 0 none;
