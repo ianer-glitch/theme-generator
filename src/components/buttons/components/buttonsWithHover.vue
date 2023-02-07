@@ -110,73 +110,73 @@ export default defineComponent({
 }
 
 :deep(.p-button){
-  background: var(--teste-1);
-  color:var(--teste-10);
-  border-color:var(--teste-1); 
-  border:1px solid var(--teste-5);
+  background: var(--cor-1);
+  color:var(--cor-10);
+  border-color:var(--cor-1); 
+  border:1px solid var(--cor-5);
 }
 
 :deep(.p-button.p-button-secondary){
-  background: var(--teste-27);
-  color:var(--teste-10);
-  border-color:var(--teste-27); 
-  border:1px solid var(--teste-7)
+  background: var(--cor-27);
+  color:var(--cor-10);
+  border-color:var(--cor-27); 
+  border:1px solid var(--cor-7)
 }
 
 :deep(.p-button.p-button-success){
-  background: var(--teste-35);
-  color:var(--teste-10);
-  border-color:var(--teste-35);
-  border:1px solid var(--teste-8)
+  background: var(--cor-35);
+  color:var(--cor-10);
+  border-color:var(--cor-35);
+  border:1px solid var(--cor-8)
 }
 
 :deep(.p-button.p-button-info){
-  background: var(--teste-85);
-  color:var(--teste-10);
-  border-color:var(--teste-85);
-  border:1px solid var(--teste-9)
+  background: var(--cor-85);
+  color:var(--cor-10);
+  border-color:var(--cor-85);
+  border:1px solid var(--cor-9)
 }
 
 :deep(.p-button.p-button-warning){
-  background: var(--teste-40);
-  color:var(--teste-41);
-  border-color:var(--teste-40); 
-  border:1px solid var(--teste-24);
+  background: var(--cor-40);
+  color:var(--cor-41);
+  border-color:var(--cor-40); 
+  border:1px solid var(--cor-24);
 }
 :deep(.p-button.p-button-help){
-  background: var(--teste-47);
-  color:var(--teste-10);
-  border-color:var(--teste-47); 
-  border:1px solid var(--teste-46);
+  background: var(--cor-47);
+  color:var(--cor-10);
+  border-color:var(--cor-47); 
+  border:1px solid var(--cor-46);
 }
 :deep(.p-button.p-button-danger){
-  background: var(--teste-52);
-  color:var(--teste-10);
-  border-color:var(--teste-52); 
-  border:1px solid var(--teste-23);
+  background: var(--cor-52);
+  color:var(--cor-10);
+  border-color:var(--cor-52); 
+  border:1px solid var(--cor-23);
 }
 :deep(.p-button.p-button-text){
-  background: var(--teste-59);
-  color:var(--teste-5);
+  background: var(--cor-59);
+  color:var(--cor-5);
   border-color:transparent;
 
 }
 
 :deep(.p-button.p-button-outlined){
-  background: var(--teste-59);
-  color:var(--teste-5);
+  background: var(--cor-59);
+  color:var(--cor-5);
   border: 1px solid; 
 }
 :deep(.p-button.p-button-link){
   background: transparent;
-  color:var(--teste-20);
+  color:var(--cor-20);
   border-color:transparent; 
   text-decoration:underline;
 }
 
 :deep(.p-button.p-button-success.p-button-outlined){
-  background: var(--teste-38);
-  color:var(--teste-8);
+  background: var(--cor-38);
+  color:var(--cor-8);
   border-color:1px solid; 
 }
 </style>

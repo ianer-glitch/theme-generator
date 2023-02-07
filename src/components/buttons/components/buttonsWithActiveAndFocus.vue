@@ -110,80 +110,80 @@ export default defineComponent({
 }
 
 :deep(.p-button){
-  background: var(--teste-20);
-  color:var(--teste-10);
-  border-color:var(--teste-20); 
+  background: var(--cor-20);
+  color:var(--cor-10);
+  border-color:var(--cor-20); 
   
   outline:none;
   outline-offset: 0;
-  box-shadow: 0 0 0 0.2rem var(--teste-4);
+  box-shadow: 0 0 0 0.2rem var(--cor-4);
 }
 
 :deep(.p-button.p-button-secondary){
-  background: var(--teste-29);
-  color:var(--teste-10);
-  border-color:var(--teste-29); 
-  box-shadow: 0 0 0 0.2rem var(--teste-28);
+  background: var(--cor-29);
+  color:var(--cor-10);
+  border-color:var(--cor-29); 
+  box-shadow: 0 0 0 0.2rem var(--cor-28);
 }
 
 :deep(.p-button.p-button-success){
-  background: var(--teste-37);
-  color:var(--teste-10);
-  border-color:var(--teste-37);
-  box-shadow: 0 0 0 0.2rem var(--teste-36) ; 
+  background: var(--cor-37);
+  color:var(--cor-10);
+  border-color:var(--cor-37);
+  box-shadow: 0 0 0 0.2rem var(--cor-36) ; 
 }
 
 :deep(.p-button.p-button-info){
-  background: var(--teste-32);
-  color:var(--teste-10);
-  border-color:var(--teste-32);
-  box-shadow: 0 0 0 0.2rem var(--teste-31)
+  background: var(--cor-32);
+  color:var(--cor-10);
+  border-color:var(--cor-32);
+  box-shadow: 0 0 0 0.2rem var(--cor-31)
 }
 
 :deep(.p-button.p-button-warning){
-  background: var(--teste-43);
-  color:var(--teste-41);
-  border-color:var(--teste-43); 
-  box-shadow: 0 0 0 0.2rem var(--teste-42);
+  background: var(--cor-43);
+  color:var(--cor-41);
+  border-color:var(--cor-43); 
+  box-shadow: 0 0 0 0.2rem var(--cor-42);
 }
 :deep(.p-button.p-button-help){
-  background: var(--teste-49);
-  color:var(--teste-10);
-  border-color:var(--teste-49); 
-  box-shadow:0 0 0 0.2rem var(--teste-48) ;
+  background: var(--cor-49);
+  color:var(--cor-10);
+  border-color:var(--cor-49); 
+  box-shadow:0 0 0 0.2rem var(--cor-48) ;
 }
 :deep(.p-button.p-button-danger){
-  background: var(--teste-54);
-  color:var(--teste-10);
-  border-color:var(--teste-54); 
-  box-shadow: 0 0 0 0.2rem var(--teste-53);
+  background: var(--cor-54);
+  color:var(--cor-10);
+  border-color:var(--cor-54); 
+  box-shadow: 0 0 0 0.2rem var(--cor-53);
 }
 :deep(.p-button.p-button-text){
-  background: var(--teste-60);
-  color:var(--teste-5);
+  background: var(--cor-60);
+  color:var(--cor-5);
   border-color:transparent;
-  box-shadow: 0 0 0 0.2rem var(--teste-4); 
+  box-shadow: 0 0 0 0.2rem var(--cor-4); 
 }
 
 :deep(.p-button.p-button-outlined){
-  background: var(--teste-60);
-  color:var(--teste-5);
+  background: var(--cor-60);
+  color:var(--cor-5);
   border: 1px solid; 
   outline:none;
   outline-offset: 0;
-  box-shadow: 0 0 0 0.2rem var(--teste-4);
+  box-shadow: 0 0 0 0.2rem var(--cor-4);
 }
 :deep(.p-button.p-button-link){
   background: transparent;
-  color:var(--teste-20);
+  color:var(--cor-20);
   border-color:transparent; 
-  box-shadow: 0 0 0 0.2rem var(--teste-4);
+  box-shadow: 0 0 0 0.2rem var(--cor-4);
 }
 
 :deep(.p-button.p-button-success.p-button-outlined){
-  background: var(--teste-39);
-  color:var(--teste-8);
+  background: var(--cor-39);
+  color:var(--cor-8);
   border-color:1px solid; 
-  box-shadow: 0 0 0 0.2rem var(--teste-36);
+  box-shadow: 0 0 0 0.2rem var(--cor-36);
 }
 </style>

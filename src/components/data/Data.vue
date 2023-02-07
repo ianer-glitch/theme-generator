@@ -73,7 +73,7 @@ export default defineComponent({
     gap:10px;
 }
 :deep(.p-datatable .p-datatable-tbody){
-  outline:0.15rem solid var(--teste-4);
+  outline:0.15rem solid var(--cor-4);
   outline-offset: -0.15rem;
 }
 </style>

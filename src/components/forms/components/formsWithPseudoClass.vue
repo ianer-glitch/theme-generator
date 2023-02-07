@@ -66,29 +66,29 @@ export default defineComponent({
 
 <style scoped>
 :deep(.p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight)){
-  border-color:var(--teste-5); 
+  border-color:var(--cor-5); 
 }
 :deep(.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box){
-    border-color: var(--teste-5);  
+    border-color: var(--cor-5);  
 }
 .pseudoclass{
-  border-color: var(--teste-5);
-  box-shadow: 0 0 0 0.2rem var(--teste-4);
+  border-color: var(--cor-5);
+  box-shadow: 0 0 0 0.2rem var(--cor-4);
 
 }
 .focus{
-  box-shadow: 0 0 0 0.2rem var(--teste-4);
+  box-shadow: 0 0 0 0.2rem var(--cor-4);
 }
 .active{
-  border-color:var(--teste-20);
-  background:var(--teste-20);
-  color:var(--teste-10)
+  border-color:var(--cor-20);
+  background:var(--cor-20);
+  color:var(--cor-10)
 }
 
 .pseudoclass-radio,.pseudoclass-check{
-  border-color: var(--teste-5);
-  background:var(--teste-5);
-  color:var(--teste-20);
+  border-color: var(--cor-5);
+  background:var(--cor-5);
+  color:var(--cor-20);
   border-radius:4px;
   
 }
