@@ -35,6 +35,9 @@ export default defineComponent({
         generalInputBorderColor                      : '#ced4da',
         generalInputItensColor                       : '#6f7d6c',
         generalTextInInputColor                      : '#495057',
+        generalCheckBoxRadioButtonBorderColor        : '#2196F3',
+        generalCheckBoxRadioButtonHoverBorderColor        : '#2196F3',
+        generalInputHoverBorderColor : '#2196F3',
       },
       isCollapsedPButton:true,
       pButton:{

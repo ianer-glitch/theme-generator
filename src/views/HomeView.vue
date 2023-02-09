@@ -95,6 +95,9 @@ export default defineComponent({
       pButtonWarningTextColor                      : null,
       pDividerColor                                : null,
       pInvalidColor                                : null,
+      generalCheckBoxRadioButtonHoverBorderColor : null,
+      generalInputHoverBorderColor :null,
+      generalCheckBoxRadioButtonBorderColor:null,
     };
   },
 
@@ -151,6 +154,9 @@ export default defineComponent({
           @pButtonWarningTextColor                       = " pButtonWarningTextColor = $event "
           @pDividerColor                                 = " pDividerColor = $event "
           @pInvalidColor                                 = " pInvalidColor = $event "
+          @generalCheckBoxRadioButtonHoverBorderColor = "generalCheckBoxRadioButtonHoverBorderColor = $event"
+          @generalInputHoverBorderColor = "generalInputHoverBorderColor = $event"
+          @generalCheckBoxRadioButtonBorderColor = "generalCheckBoxRadioButtonBorderColor =$event"
           />
         <Fonts/>
       </div>
@@ -306,7 +312,9 @@ export default defineComponent({
   --cor-12: rgba(33, 150, 243, 0.24);
   --cor-30: rgba(96, 125, 139, 0.04);
   --cor-89: rgba(96, 125, 139, 0.16);
-  --cor-90:tomato
+  --cor-90:v-bind('generalCheckBoxRadioButtonHoverBorderColor');
+  --cor-91:v-bind('generalInputHoverBorderColor');
+  --cor-92:v-bind('generalCheckBoxRadioButtonBorderColor');
   
   
 }

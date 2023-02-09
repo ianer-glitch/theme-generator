@@ -72,7 +72,7 @@ export default defineComponent({
     border-color: var(--cor-90);  
 }
 .pseudoclass{
-  border-color: var(--cor-5);
+  border-color: var(--cor-91);
   box-shadow: 0 0 0 0.2rem var(--cor-4);
 
 }
@@ -118,5 +118,11 @@ export default defineComponent({
 }
 .last-text-content-item{
   width: calc(100%/3);
+}
+:deep(.p-checkbox .p-checkbox-box.p-highlight){
+  border-color:var(--cor-92);
+}
+:deep(.p-radiobutton .p-radiobutton-box.p-highlight){
+  border-color:var(--cor-92);
 }
 </style>
