@@ -157,14 +157,14 @@ export default defineComponent({
 }
 :deep(.p-button.p-button-text){
   background: var(--cor-59);
-  color:var(--cor-5);
+  color:var(--cor-93);
   border-color:transparent;
 
 }
 
 :deep(.p-button.p-button-outlined){
   background: var(--cor-59);
-  color:var(--cor-5);
+  color:var(--cor-93);
   border: 1px solid; 
 }
 :deep(.p-button.p-button-link){

@@ -98,6 +98,7 @@ export default defineComponent({
       generalCheckBoxRadioButtonHoverBorderColor : null,
       generalInputHoverBorderColor :null,
       generalCheckBoxRadioButtonBorderColor:null,
+      pButtonTextOutlinedHoverColor: null,
     };
   },
 
@@ -157,6 +158,7 @@ export default defineComponent({
           @generalCheckBoxRadioButtonHoverBorderColor = "generalCheckBoxRadioButtonHoverBorderColor = $event"
           @generalInputHoverBorderColor = "generalInputHoverBorderColor = $event"
           @generalCheckBoxRadioButtonBorderColor = "generalCheckBoxRadioButtonBorderColor =$event"
+          @pButtonTextOutlinedHoverColor = "pButtonTextOutlinedHoverColor = $event"
           />
         <Fonts/>
       </div>
@@ -315,6 +317,7 @@ export default defineComponent({
   --cor-90:v-bind('generalCheckBoxRadioButtonHoverBorderColor');
   --cor-91:v-bind('generalInputHoverBorderColor');
   --cor-92:v-bind('generalCheckBoxRadioButtonBorderColor');
+  --cor-93:v-bind('pButtonTextOutlinedHoverColor')
   
   
 }

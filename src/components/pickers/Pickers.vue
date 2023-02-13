@@ -44,6 +44,7 @@ export default defineComponent({
         pButtonBackgroundColorAndGeneralInputColor   : '#2196F3',
         pButtonHoverBackgroundColor                  : '#0d89ec',
         pButtonActiveAndFocusBackgroundColor         : '#0b7ad1',
+        pButtonTextOutlinedHoverColor : '#2196F3',
       },
       isCollapsedPbuttonSecondary:true,
       pButtonSecondary:{
