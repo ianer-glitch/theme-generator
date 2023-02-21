@@ -1,24 +1,25 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import formGenerator from "@/components/formGenerator/formGenerator.vue"
-
+import step1 from "./components/steps/step1/step1.vue";
+import step2 from "./components/steps/step2/step2.vue";
+import step3 from "./components/steps/step3/step3.vue";
 const name = "AboutView";
 
 export default defineComponent({
   name,
 
   components: {
-    formGenerator:formGenerator as any,
-  },
+    step1: step1 as any,
+    step2: step2 as any,
+    step3: step3 as any,
+},
 
   props: {},
 
   mounted() {},
 
   methods: {
-    cor(e){
-      console.log(e)
-    }
+
   },
 
   updated() {
@@ -27,36 +28,8 @@ export default defineComponent({
 
   data() {
     return {
-      need:false,
-      value:"",
-      components:[
-        {
-          name:"PInputText",
-          vmodel:{name:"entrada",defaultValue:""},
-          props:{
-            label:"isso é uma label",
-            placeholder:"esse é o tal do placeholder"
-          },
-          style:{
-            width:"100%",
-            'grid-area':"1/1/2/2"
-          },
-        },
-        {
-          name:"PInputText",
-          vmodel:{name:"entrada2",defaultValue:""},
-          props:{
-            label:"isso é uma label",
-            placeholder:"esse é o tal do placeholder"
-          },
-          style:{
-            width:"100%",
-            'grid-area':"1/2/2/3"
-          },
-        },
-        
-      ]
-    };
+      index: 1 as number,
+      }
   },
 
   computed: {},
@@ -64,21 +37,29 @@ export default defineComponent({
 </script>
 
 <template>
-  <main class="about">
-    <formGenerator 
-      display="grid" 
-      :lineNumber="1" 
-      :columnNumber="2" 
-      :components="components" 
-      :needAllData="need"
-      @entrada-change="cor($event)"
-      @all-data="cor($event)"
-      @click="need = !need"
-      />
-  </main>
+  <div class="container">
+    <div class="step-container">
+     <step1 @index="index  = $event" v-if="index === 1" :index="1"/>
+     <step2 @index="index  = $event" v-if="index === 2" :index="2"/>
+     <step3 @index="index  = $event" v-if="index === 3" :index="3"/>
+    </div>
+    <div class="buttons">
+
+    </div>
+  </div>
 </template>
 
 <style >
+
+*{
+  padding: 0;
+  margin: 0;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
 *{
   --cor-32: #026da7;
   --cor-85: #027abc;
