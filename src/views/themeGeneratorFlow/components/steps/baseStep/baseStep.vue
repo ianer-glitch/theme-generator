@@ -71,7 +71,7 @@ export default defineComponent({
   justify-content: center;
   background-color: #FAF8F1;
   width: 90%;
-  height: 500px;
+  height: 80%;
   border-radius:16px;
 }
 .control-panel{
@@ -80,7 +80,11 @@ export default defineComponent({
   width: 18%;
   height: 100%;
   left:0;
-  border-radius: 0 32px 32px 0;
+  border-radius: 0 100px 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .step-container{
   display: flex;

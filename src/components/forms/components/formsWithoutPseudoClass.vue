@@ -23,6 +23,9 @@ export default defineComponent({
       checkBox2:false,
       checkBox3:false,
       radioButton:"1",
+      inputText:'Neque porro quisquam est qui dolorem ipsum',
+      inputDropdownOptions:[{label:'consectetur, adipisci velit..'}],
+      inputDropdown:{label:'consectetur, adipisci velit..'}
     };
   },
 
@@ -34,8 +37,8 @@ export default defineComponent({
   <main class="forms">
     <div class="without-pseudoclass">
       <PDivider align = center >Normal</PDivider>
-      <PDropDown />
-      <PInputText />
+      <PDropDown  v-model="inputDropdown" :options="inputDropdownOptions" optionLabel="label"/>
+      <PInputText v-model="inputText"/>
       <div class="p-inputgroup">
         <span class="p-inputgroup-addon">
           <i class="pi pi-user"></i>
