@@ -34,12 +34,10 @@ export default defineComponent({
 </script>
 
 <template>
-    <div>
-        <div class="buttonStep">     
+      <div class="buttonStep">     
         <i :class="icon" style="font-size: 1.2rem; color:#FAF8F1"></i>   
           {{ label }}
-        </div>
-    </div>
+      </div>
 </template>
 
 

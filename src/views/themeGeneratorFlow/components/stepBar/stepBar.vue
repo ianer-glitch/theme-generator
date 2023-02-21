@@ -73,4 +73,7 @@ export default defineComponent({
   justify-content: center;
   align-items: center;
 }
+.ball,.ball-focused{
+  cursor: pointer;
+}
 </style>

@@ -40,7 +40,9 @@ export default defineComponent({
 <template>
     <div class="step">
       <div class="control-panel">
-        <slot name="control-panel"></slot>
+        <div class="control-panel-container">
+          <slot name="control-panel"></slot>
+        </div>
       </div> 
       <div class="step-container">
         <stepBar :totalSteps="totalSteps" :key="index" :index="index" @index="$emit('index',$event)"/>
@@ -76,18 +78,31 @@ export default defineComponent({
   width: 90%;
   height: 80%;
   border-radius:16px;
+  padding:4rem;
 }
 .control-panel{
   position: absolute;
-  background-color: #C58940;
+  background-color: #FAEAB1;
   width: 18%;
   height: 100%;
   left:0;
   border-radius: 0 100px 100px 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+  /* border:12px solid #e5ba73; */
+}
+.control-panel-container{
+  height: calc(100% - 12px);
+  width: calc(100% - 12px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding:1.2rem;
+  background-color: #e5ba73;
+  border-radius: inherit;
 }
 .step-container{
   display: flex;
