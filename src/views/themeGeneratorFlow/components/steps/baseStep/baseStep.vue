@@ -63,7 +63,10 @@ export default defineComponent({
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-color: #FAF8F1;
+  /* background-color: #FAF8F1; */
+  background-image:url(@/assets/cookies/cookie1.svg);
+  background-repeat: no-repeat;
+  background-position: 70vw 50vh;
 }
 .container{
   display: flex;

@@ -83,11 +83,10 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="container">
+  <div class="full-container">
     <div class="step-container">
      <step1 
         @generalBackgroundColor  = " generalBackgroundColor = $event "
-        
         @generalInputBorderColor = " generalInputBorderColor = $event "
         @generalInputItensColor  = " generalInputItensColor = $event "
         @generalTextInInputColor = " generalTextInInputColor = $event "
@@ -96,9 +95,9 @@ export default defineComponent({
       :index                     = "1"
       />
      <step2 
+       @generalBoxShadowColor   = " generalBoxShadowColor = $event "
        @generalCheckBoxRadioButtonBorderColor      = "generalCheckBoxRadioButtonBorderColor =$event"
        @generalCheckBoxRadioButtonHoverBorderColor = "generalCheckBoxRadioButtonHoverBorderColor = $event"
-       @generalBoxShadowColor   = " generalBoxShadowColor = $event "
        @generalInputHoverBorderColor               = "generalInputHoverBorderColor = $event"
        @index                                      = "index  = $event"
        v-if                                        = "index === 2"
@@ -117,6 +116,7 @@ export default defineComponent({
 *{
   padding: 0;
   margin: 0;
+
 }
 html,body{
   width: 100%;
