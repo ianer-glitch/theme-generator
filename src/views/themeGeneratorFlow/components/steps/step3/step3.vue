@@ -1,12 +1,16 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import baseStep from "../baseStep/baseStep.vue";
+import buttonContainerWithoutPseudoClass from "./components/buttonContainerWithoutPseudoClass.vue";
 const name = 'step3'
 
 export default defineComponent({
   name,
 
-  components: { baseStep : baseStep as any}, 
+  components: { 
+    baseStep : baseStep as any,
+    buttonContainerWithoutPseudoClass: buttonContainerWithoutPseudoClass as any,
+  }, 
 
   props: { 
     index:{
@@ -38,7 +42,7 @@ export default defineComponent({
 
             </template>
             <template #container>
-                
+                <buttonContainerWithoutPseudoClass/>
             </template>
         </baseStep>
     </div>

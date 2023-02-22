@@ -28,7 +28,6 @@ export default defineComponent({
   data () {
     return { 
       generalConfig:{
-        generalCheckBoxRadioButtonBorderColor        : '#2196F3',
         generalBoxShadowColor                        : '#a6d5fa',
         generalCheckBoxRadioButtonHoverBorderColor        : '#2196F3',
         generalInputHoverBorderColor : '#2196F3',

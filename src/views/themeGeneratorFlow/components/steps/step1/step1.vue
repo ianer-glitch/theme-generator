@@ -1,5 +1,5 @@
 <script lang="ts">
-import FormsWithoutPseudoClass from "@/components/forms/components/formsWithoutPseudoClass.vue";
+import FormsWithoutPseudoClass from "./components/formsWithoutPseudoClass.vue";
 import ColorPickerInput from "@/components/pickers/components/ColorPickerInput.vue";
 import { defineComponent } from "vue";
 import baseStep from "../baseStep/baseStep.vue";
@@ -28,10 +28,12 @@ export default defineComponent({
   data () {
     return { 
       generalConfig:{
-        generalBackgroundColor                       : '#ffffff',
-        generalInputBorderColor                      : '#ced4da',
-        generalInputItensColor                       : '#6f7d6c',
-        generalTextInInputColor                      : '#495057',
+        inputBackgroundColor : '#ffffff',
+        inputBorderColor     : '#ced4da',
+        inputPlaceholderColor: '#6f7d6c',
+        inputTextColor       : '#495057',
+        checkboxRadiobuttonColor       : '#2196F3',
+        buttonPrimaryColor   : '#2196F3',
       },
     }
   },

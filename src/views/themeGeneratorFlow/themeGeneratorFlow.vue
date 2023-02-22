@@ -31,14 +31,14 @@ export default defineComponent({
       index: 1 as number,
 
       dataTableHeaderColor                         : null,
-      generalBackgroundColor                       : null,
+      inputBackgroundColor                       : null,
       generalBoxShadowColor                        : null,
-      generalInputBorderColor                      : null,
-      generalInputItensColor                       : null,
-      generalTextInInputColor                      : null,
+      inputBorderColor                      : null,
+      inputPlaceholderColor                         : null,
+      inputTextColor                      : null,
       inputDetailsAndGridLinesColor                : null,
       pButtonActiveAndFocusBackgroundColor         : null,
-      pButtonBackgroundColorAndGeneralInputColor   : null,
+      buttonPrimaryColor   : null,
       pButtonDangerActiveAndFocusBackgroundColor   : null,
       pButtonDangerActiveAndFocusBorderColor       : null,
       pButtonDangerBackgroundColor                 : null,
@@ -73,7 +73,7 @@ export default defineComponent({
       pInvalidColor                                : null,
       generalCheckBoxRadioButtonHoverBorderColor : null,
       generalInputHoverBorderColor :null,
-      generalCheckBoxRadioButtonBorderColor:null,
+      checkboxRadiobuttonColor:null,
       pButtonTextOutlinedHoverColor: null,
       }
   },
@@ -84,25 +84,31 @@ export default defineComponent({
 
 <template>
   <div class="full-container">
+   
     <div class="step-container">
-     <step1 
-        @generalBackgroundColor  = " generalBackgroundColor = $event "
-        @generalInputBorderColor = " generalInputBorderColor = $event "
-        @generalInputItensColor  = " generalInputItensColor = $event "
-        @generalTextInInputColor = " generalTextInInputColor = $event "
-        @index                   = "index  = $event"
-        v-if                     = "index === 1"
-      :index                     = "1"
-      />
-     <step2 
-       @generalBoxShadowColor   = " generalBoxShadowColor = $event "
-       @generalCheckBoxRadioButtonBorderColor      = "generalCheckBoxRadioButtonBorderColor =$event"
-       @generalCheckBoxRadioButtonHoverBorderColor = "generalCheckBoxRadioButtonHoverBorderColor = $event"
-       @generalInputHoverBorderColor               = "generalInputHoverBorderColor = $event"
-       @index                                      = "index  = $event"
-       v-if                                        = "index === 2"
-     :index                                        = "2"
-     />
+      <KeepAlive>
+        <step1 
+          @buttonPrimaryColor    = " buttonPrimaryColor = $event "   
+          @checkboxRadiobuttonColor = "checkboxRadiobuttonColor =$event"
+          @index                                 = "index  = $event"
+          @inputBackgroundColor                  = "inputBackgroundColor = $event "
+          @inputBorderColor                      = "inputBorderColor = $event "
+          @inputPlaceholderColor                 = "inputPlaceholderColor   = $event "
+          @inputTextColor                        = "inputTextColor = $event "
+          v-if                                   = "index === 1"
+          :index                                   = "1"
+          />
+      </KeepAlive> 
+      <KeepAlive>
+        <step2 
+          @generalBoxShadowColor   = " generalBoxShadowColor = $event "
+          @generalCheckBoxRadioButtonHoverBorderColor = "generalCheckBoxRadioButtonHoverBorderColor = $event"
+          @generalInputHoverBorderColor               = "generalInputHoverBorderColor = $event"
+          @index                                      = "index  = $event"
+          v-if                                        = "index === 2"
+        :index                                        = "2"
+        />
+      </KeepAlive>
      <step3 @index="index  = $event" v-if="index === 3" :index="3"/>
     </div>
     <div class="buttons">
@@ -283,18 +289,18 @@ html,body{
 }
 
 * {
-  --cor-6 :v-bind('generalTextInInputColor');
-  --cor-3 :v-bind('generalInputItensColor');
+  --cor-6 :v-bind('inputTextColor');
+  --cor-3 :v-bind('inputPlaceholderColor  ');
   --cor-4 :v-bind('generalBoxShadowColor');
-  --cor-19:v-bind('generalInputBorderColor');
-  --cor-10:v-bind('generalBackgroundColor');
+  --cor-19:v-bind('inputBorderColor');
+  --cor-10:v-bind('inputBackgroundColor');
   --cor-17:v-bind('inputDetailsAndGridLinesColor');
   --cor-9 :v-bind('pButtonInfoBackgroundColor');
   --cor-85:v-bind('pButtonInfoHoverBackgroundColor');
   --cor-32:v-bind('pButtonInfoActiveAndFocusBackgroundColor');
   --cor-20:v-bind('pButtonActiveAndFocusBackgroundColor');
   --cor-1 :v-bind('pButtonHoverBackgroundColor');
-  --cor-5 :v-bind('pButtonBackgroundColorAndGeneralInputColor');
+  --cor-5 :v-bind('buttonPrimaryColor');
   --cor-59:v-bind('pButtonTextHoverBackgroundColor');
   --cor-60:v-bind('pButtonTextActiveAndFocusBackgroundColor');
   --cor-7 :v-bind('pButtonSecondaryBackgroundColor');
@@ -373,7 +379,7 @@ html,body{
   --cor-89: rgba(96, 125, 139, 0.16);
   --cor-90:v-bind('generalCheckBoxRadioButtonHoverBorderColor');
   --cor-91:v-bind('generalInputHoverBorderColor');
-  --cor-92:v-bind('generalCheckBoxRadioButtonBorderColor');
+  --cor-92:v-bind('checkboxRadiobuttonColor');
   --cor-93:v-bind('pButtonTextOutlinedHoverColor')
   
   
