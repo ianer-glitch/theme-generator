@@ -3,6 +3,7 @@ import { defineComponent } from "vue";
 import step1 from "./components/steps/step1/step1.vue";
 import step2 from "./components/steps/step2/step2.vue";
 import step3 from "./components/steps/step3/step3.vue";
+import step4 from "./components/steps/step4/step4.vue"
 const name = "AboutView";
 
 export default defineComponent({
@@ -12,6 +13,7 @@ export default defineComponent({
     step1: step1 as any,
     step2: step2 as any,
     step3: step3 as any,
+    step4: step4 as any,
 },
 
   props: {},
@@ -32,13 +34,13 @@ export default defineComponent({
 
       dataTableHeaderColor                         : null,
       inputBackgroundColor                       : null,
-      generalBoxShadowColor                        : null,
+      inputBoxShadowColor                       : null,
       inputBorderColor                      : null,
       inputPlaceholderColor                         : null,
       inputTextColor                      : null,
       inputDetailsAndGridLinesColor                : null,
       pButtonActiveAndFocusBackgroundColor         : null,
-      buttonPrimaryColor   : null,
+      buttonColor   : null,
       pButtonDangerActiveAndFocusBackgroundColor   : null,
       pButtonDangerActiveAndFocusBorderColor       : null,
       pButtonDangerBackgroundColor                 : null,
@@ -47,7 +49,7 @@ export default defineComponent({
       pButtonHelpActiveAndFocusBorderColor         : null,
       pButtonHelpBackgroundColor                   : null,
       pButtonHelpHoverBackgroundColor              : null,
-      pButtonHoverBackgroundColor                  : null,
+      buttonHoverColor                  : null,
       pButtonInfoActiveAndFocusBackgroundColor     : null,
       pButtonInfoBackgroundColor                   : null,
       pButtonInfoHoverBackgroundColor              : null,
@@ -72,9 +74,17 @@ export default defineComponent({
       pDividerColor                                : null,
       pInvalidColor                                : null,
       generalCheckBoxRadioButtonHoverBorderColor : null,
-      generalInputHoverBorderColor :null,
-      checkboxRadiobuttonColor:null,
+      inputHoverBorderColor :null,
+      checkboxradiobuttonBorderColor:null,
       pButtonTextOutlinedHoverColor: null,
+
+      checkboxBorderColor: null,
+      radiobuttonBorderColor:null,
+      checkboxColor:null,
+      radioButtonColor:null,
+      buttonBorderColor:null,
+      checkBoxSelectedBorderColor:null,
+      radioButtonSelectedBorderColor:null,
       }
   },
 
@@ -88,28 +98,48 @@ export default defineComponent({
     <div class="step-container">
       <KeepAlive>
         <step1 
-          @buttonPrimaryColor    = " buttonPrimaryColor = $event "   
-          @checkboxRadiobuttonColor = "checkboxRadiobuttonColor =$event"
-          @index                                 = "index  = $event"
-          @inputBackgroundColor                  = "inputBackgroundColor = $event "
-          @inputBorderColor                      = "inputBorderColor = $event "
-          @inputPlaceholderColor                 = "inputPlaceholderColor   = $event "
-          @inputTextColor                        = "inputTextColor = $event "
-          v-if                                   = "index === 1"
-          :index                                   = "1"
+          :index                 = "1"
+          v-if                   = "index === 1"
+          @index                 = "index  = $event"
+          @inputBackgroundColor  = "inputBackgroundColor = $event "
+          @inputBorderColor      = "inputBorderColor = $event "
+          @inputPlaceholderColor = "inputPlaceholderColor   = $event "
+          @inputTextColor        = "inputTextColor = $event "
           />
       </KeepAlive> 
       <KeepAlive>
         <step2 
-          @generalBoxShadowColor   = " generalBoxShadowColor = $event "
-          @generalCheckBoxRadioButtonHoverBorderColor = "generalCheckBoxRadioButtonHoverBorderColor = $event"
-          @generalInputHoverBorderColor               = "generalInputHoverBorderColor = $event"
-          @index                                      = "index  = $event"
-          v-if                                        = "index === 2"
-        :index                                        = "2"
+          :index                   = "2"
+          v-if                   = "index === 2"
+          @index                 = "index  = $event"
+          @inputBoxShadowColor   = " inputBoxShadowColor= $event "
+          @inputHoverBorderColor = "inputHoverBorderColor = $event"
         />
       </KeepAlive>
-     <step3 @index="index  = $event" v-if="index === 3" :index="3"/>
+     <KeepAlive> 
+       <step3 
+          :index="3"
+          v-if="index === 3" 
+          @index="index  = $event" 
+          @buttonColor    = " buttonColor = $event "
+          @checkboxBorderColor = "checkboxBorderColor = $event"
+          @radiobuttonBorderColor="radiobuttonBorderColor = $event"
+          @checkboxColor = "checkboxColor = $event"
+          @radioButtonColor = "radioButtonColor = $event"
+          @buttonBorderColor = "buttonBorderColor =$event"
+          @checkBoxSelectedBorderColor = "checkBoxSelectedBorderColor = $event"
+          @radioButtonSelectedBorderColor = "radioButtonSelectedBorderColor = $event"
+          />
+     </KeepAlive>
+     <KeepAlive> 
+       <step4 
+          :index="4"
+          @index="index  = $event"
+          @generalCheckBoxRadioButtonHoverBorderColor = "generalCheckBoxRadioButtonHoverBorderColor = $event"
+          @buttonHoverColor = "buttonHoverColor = $event"
+          v-if="index === 4" 
+          />
+     </KeepAlive>
     </div>
     <div class="buttons">
 
@@ -291,7 +321,7 @@ html,body{
 * {
   --cor-6 :v-bind('inputTextColor');
   --cor-3 :v-bind('inputPlaceholderColor  ');
-  --cor-4 :v-bind('generalBoxShadowColor');
+  --cor-4 :v-bind('inputBoxShadowColor');
   --cor-19:v-bind('inputBorderColor');
   --cor-10:v-bind('inputBackgroundColor');
   --cor-17:v-bind('inputDetailsAndGridLinesColor');
@@ -299,8 +329,8 @@ html,body{
   --cor-85:v-bind('pButtonInfoHoverBackgroundColor');
   --cor-32:v-bind('pButtonInfoActiveAndFocusBackgroundColor');
   --cor-20:v-bind('pButtonActiveAndFocusBackgroundColor');
-  --cor-1 :v-bind('pButtonHoverBackgroundColor');
-  --cor-5 :v-bind('buttonPrimaryColor');
+  --cor-1 :v-bind('buttonHoverColor');
+  --cor-5 :v-bind('buttonColor');
   --cor-59:v-bind('pButtonTextHoverBackgroundColor');
   --cor-60:v-bind('pButtonTextActiveAndFocusBackgroundColor');
   --cor-7 :v-bind('pButtonSecondaryBackgroundColor');
@@ -378,9 +408,20 @@ html,body{
   --cor-30: rgba(96, 125, 139, 0.04);
   --cor-89: rgba(96, 125, 139, 0.16);
   --cor-90:v-bind('generalCheckBoxRadioButtonHoverBorderColor');
-  --cor-91:v-bind('generalInputHoverBorderColor');
-  --cor-92:v-bind('checkboxRadiobuttonColor');
-  --cor-93:v-bind('pButtonTextOutlinedHoverColor')
+  --cor-91:v-bind('inputHoverBorderColor');
+  /* --cor-92:v-bind('checkboxradiobuttonBorderColor'); */
+  /* --cor-93:v-bind('pButtonTextOutlinedHoverColor'); */
+  --cor-94:v-bind('checkboxBorderColor');
+  --cor-95:v-bind('radiobuttonBorderColor');
+  --cor-96:v-bind('checkboxColor');
+  --cor-97:v-bind('radioButtonColor');
+  --cor-98:v-bind('buttonBorderColor');
+  --checkBoxSelectedBorderColor:v-bind('checkBoxSelectedBorderColor');
+  --cor-100:v-bind('radioButtonSelectedBorderColor');
+
+  
+  
+
   
   
 }
@@ -783,11 +824,11 @@ html,body{
   height: 20px;
 }
 .p-checkbox .p-checkbox-box {
-  border: 2px solid var(--cor-19);
+  border: 2px solid var(--cor-94);
   background: var(--cor-10);
   width: 20px;
   height: 20px;
-  color: var(--cor-6);
+  color: var(--checkBoxSelectedBorderColor);
   border-radius: 3px;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
@@ -798,7 +839,7 @@ html,body{
 }
 .p-checkbox .p-checkbox-box.p-highlight {
   border-color: var(--cor-5);
-  background: var(--cor-5);
+  background: var(--cor-96);
 }
 .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
   border-color: var(--cor-5);
@@ -1574,11 +1615,11 @@ html,body{
   height: 20px;
 }
 .p-radiobutton .p-radiobutton-box {
-  border: 2px solid var(--cor-19);
+  border: 2px solid var(--cor-95);
   background: var(--cor-10);
   width: 20px;
   height: 20px;
-  color: var(--cor-6);
+  color: var(--cor-100);
   border-radius: 50%;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
@@ -1599,7 +1640,7 @@ html,body{
 }
 .p-radiobutton .p-radiobutton-box.p-highlight {
   border-color: var(--cor-5);
-  background: var(--cor-5);
+  background: var(--cor-97);
 }
 .p-radiobutton .p-radiobutton-box.p-highlight:not(.p-disabled):hover {
   border-color: var(--cor-20);
@@ -1854,7 +1895,7 @@ html,body{
 .p-button {
   color: var(--cor-10);
   background: var(--cor-5);
-  border: 1px solid var(--cor-5);
+  border: 1px solid var(--cor-98);
   padding: 0.5rem 1rem;
   font-size: 1rem;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;

@@ -1,17 +1,17 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import baseStep from "../baseStep/baseStep.vue";
-import formsWithPseudoClass from "./components/formsWithPseudoClass/formsWithPseudoClass.vue";
 import ColorPickerInput from "@/components/pickers/components/ColorPickerInput.vue";
-const name = 'step2'
+import buttonContainerWithPseudoClass from "./components/buttonContainerWithPseudoClass.vue";
+const name = 'step4'
 
 export default defineComponent({
   name,
 
   components: { 
     baseStep : baseStep as any,
-    formsWithPseudoClass:formsWithPseudoClass as any,
-    colorPickerInput: ColorPickerInput as any
+    ColorPickerInput: ColorPickerInput as any,
+    buttonContainerWithPseudoClass: buttonContainerWithPseudoClass as any
   }, 
 
   props: { 
@@ -27,10 +27,11 @@ export default defineComponent({
 
   data () {
     return { 
-      generalConfig:{
-      inputBoxShadowColor  : '#a6d5fa',
-      inputHoverBorderColor : '#2196F3',
-      }
+      pButton:{
+        buttonHoverColor   : '#2196F3',
+        checkboxRadiobuttonColor       : '#2196F3',
+        generalCheckBoxRadioButtonHoverBorderColor        : '#2196F3',
+      },
     }
   },
 
@@ -45,7 +46,7 @@ export default defineComponent({
     <div>
         <baseStep @index = "$emit('index',$event)" :index = "index">
           <template #control-panel>
-            <colorPickerInput v-for="(color,colorName)  in generalConfig"
+            <colorPickerInput v-for="(color,colorName)  in  pButton"
               :defaultColor="color"
               @change="$emit(colorName,$event)"
               @mounted="$emit(colorName,$event)"
@@ -53,7 +54,7 @@ export default defineComponent({
             />
             </template>
             <template #container>
-                <formsWithPseudoClass></formsWithPseudoClass>
+              <buttonContainerWithPseudoClass/>
             </template>
         </baseStep>
     </div>

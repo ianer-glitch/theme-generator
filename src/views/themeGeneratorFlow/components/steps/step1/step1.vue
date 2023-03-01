@@ -32,8 +32,8 @@ export default defineComponent({
         inputBorderColor     : '#ced4da',
         inputPlaceholderColor: '#6f7d6c',
         inputTextColor       : '#495057',
-        checkboxRadiobuttonColor       : '#2196F3',
-        buttonPrimaryColor   : '#2196F3',
+        
+      
       },
     }
   },
