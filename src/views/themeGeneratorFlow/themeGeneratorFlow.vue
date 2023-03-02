@@ -83,8 +83,14 @@ export default defineComponent({
       checkboxColor:null,
       radioButtonColor:null,
       buttonBorderColor:null,
-      checkBoxSelectedBorderColor:null,
-      radioButtonSelectedBorderColor:null,
+      checkBoxClickedUnfocusBorderColor:null,
+      radioButtonClickedUnfocusBorderColor:null,
+      checkBoxHoverColor:null,
+      radioButtonHoverColor:null,
+      checkBoxClickedHoverColor:null,
+      checkBoxBorderHoverColor:null,
+      radioButtonHoverBorderColor:null,
+      radioButtonClickedHoverColor:null,
       }
   },
 
@@ -127,16 +133,27 @@ export default defineComponent({
           @checkboxColor = "checkboxColor = $event"
           @radioButtonColor = "radioButtonColor = $event"
           @buttonBorderColor = "buttonBorderColor =$event"
-          @checkBoxSelectedBorderColor = "checkBoxSelectedBorderColor = $event"
-          @radioButtonSelectedBorderColor = "radioButtonSelectedBorderColor = $event"
+          @checkBoxClickedUnfocusBorderColor = "checkBoxClickedUnfocusBorderColor = $event"
+          @radioButtonClickedUnfocusBorderColor = "radioButtonClickedUnfocusBorderColor = $event"
+
           />
-     </KeepAlive>
-     <KeepAlive> 
-       <step4 
+        </KeepAlive>
+        <KeepAlive> 
+          <step4 
           :index="4"
           @index="index  = $event"
-          @generalCheckBoxRadioButtonHoverBorderColor = "generalCheckBoxRadioButtonHoverBorderColor = $event"
           @buttonHoverColor = "buttonHoverColor = $event"
+          @checkBoxBorderHoverColor = "checkBoxBorderHoverColor = $event"
+          @checkBoxClickedHoverColor = "checkBoxClickedHoverColor =$event"
+          @checkBoxHoverColor="checkBoxHoverColor = $event"
+          
+          @radioButtonHoverColor = "radioButtonHoverColor =$event"
+          @radioButtonHoverBorderColor = "radioButtonHoverBorderColor = $event"
+          @radioButtonClickedHoverColor = "radioButtonClickedHoverColor = $event"
+
+          @generalCheckBoxRadioButtonHoverBorderColor = "generalCheckBoxRadioButtonHoverBorderColor = $event"
+          
+          
           v-if="index === 4" 
           />
      </KeepAlive>
@@ -416,8 +433,18 @@ html,body{
   --cor-96:v-bind('checkboxColor');
   --cor-97:v-bind('radioButtonColor');
   --cor-98:v-bind('buttonBorderColor');
-  --checkBoxSelectedBorderColor:v-bind('checkBoxSelectedBorderColor');
-  --cor-100:v-bind('radioButtonSelectedBorderColor');
+  --checkBoxClickedUnfocusBorderColor:v-bind('checkBoxClickedUnfocusBorderColor');
+  --checkBoxHoverColor:v-bind('checkBoxHoverColor');
+  --checkBoxClickedHoverColor:v-bind('checkBoxClickedHoverColor');
+  --checkBoxBorderHoverColor:v-bind('checkBoxBorderHoverColor');
+  --radioButtonClickedUnfocusBorderColor:v-bind('radioButtonClickedUnfocusBorderColor');
+  --radioButtonHoverColor:v-bind('radioButtonHoverColor');
+  --radioButtonHoverBorderColor:v-bind('radioButtonHoverBorderColor');
+  --radioButtonClickedHoverColor:v-bind('radioButtonClickedHoverColor');
+
+  
+  
+  
 
   
   
@@ -828,7 +855,7 @@ html,body{
   background: var(--cor-10);
   width: 20px;
   height: 20px;
-  color: var(--checkBoxSelectedBorderColor);
+  color: var(--checkBoxClickedUnfocusBorderColor);
   border-radius: 3px;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
@@ -842,17 +869,17 @@ html,body{
   background: var(--cor-96);
 }
 .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
-  border-color: var(--cor-5);
+  border-color: var(--checkBoxHoverColor);
 }
 .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus {
   outline: 0 none;
   outline-offset: 0;
   box-shadow: 0 0 0 0.2rem var(--cor-4);
-  border-color: var(--cor-5);
+  border-color: var(--checkBoxClickedUnfocusBorderColor);
 }
 .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
-  border-color: var(--cor-20);
-  background: var(--cor-20);
+  border-color: var(--checkBoxBorderHoverColor);
+  background: var(--checkBoxClickedHoverColor);
   color: var(--cor-10);
 }
 .p-checkbox.p-invalid > .p-checkbox-box {
@@ -863,13 +890,13 @@ html,body{
   background-color: var(--cor-18);
 }
 .p-input-filled .p-checkbox .p-checkbox-box.p-highlight {
-  background: var(--cor-5);
+  background: var(--radioButtonHoverBorderColor);
 }
 .p-input-filled .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
   background-color: var(--cor-18);
 }
 .p-input-filled .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
-  background: var(--cor-20);
+  background: var(--checkBoxClickedHoverColor);
 }
 
 .p-chips:not(.p-disabled):hover .p-chips-multiple-container {
@@ -1619,18 +1646,18 @@ html,body{
   background: var(--cor-10);
   width: 20px;
   height: 20px;
-  color: var(--cor-100);
+  color: var(--radioButtonClickedUnfocusBorderColor);
   border-radius: 50%;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
 .p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
-  border-color: var(--cor-5);
+  border-color: var(--radioButtonHoverColor);
 }
 .p-radiobutton .p-radiobutton-box:not(.p-disabled).p-focus {
   outline: 0 none;
   outline-offset: 0;
   box-shadow: 0 0 0 0.2rem var(--cor-4);
-  border-color: var(--cor-5);
+  border-color: var(--radioButtonHoverBorderColor);
 }
 .p-radiobutton .p-radiobutton-box .p-radiobutton-icon {
   width: 12px;
@@ -1643,8 +1670,8 @@ html,body{
   background: var(--cor-97);
 }
 .p-radiobutton .p-radiobutton-box.p-highlight:not(.p-disabled):hover {
-  border-color: var(--cor-20);
-  background: var(--cor-20);
+  border-color: var(--radioButtonHoverBorderColor);
+  background: var(--radioButtonClickedHoverColor);
   color: var(--cor-10);
 }
 .p-radiobutton.p-invalid > .p-radiobutton-box {
@@ -1664,7 +1691,7 @@ html,body{
   background: var(--cor-5);
 }
 .p-input-filled .p-radiobutton .p-radiobutton-box.p-highlight:not(.p-disabled):hover {
-  background: var(--cor-20);
+  background: var(--radioButtonHoverColor);
 }
 
 .p-rating {

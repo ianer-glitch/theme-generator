@@ -2,7 +2,7 @@
 import { defineComponent } from "vue";
 import baseStep from "../baseStep/baseStep.vue";
 import ColorPickerInput from "@/components/pickers/components/ColorPickerInput.vue";
-import buttonContainerWithPseudoClass from "./components/buttonContainerWithPseudoClass.vue";
+import checkboxRadioButtonContainerWithPseudoClass from "./components/checkboxRadioButtonContainerWithPseudoClass.vue";
 const name = 'step4'
 
 export default defineComponent({
@@ -11,7 +11,7 @@ export default defineComponent({
   components: { 
     baseStep : baseStep as any,
     ColorPickerInput: ColorPickerInput as any,
-    buttonContainerWithPseudoClass: buttonContainerWithPseudoClass as any
+    checkboxRadioButtonContainerWithPseudoClass: checkboxRadioButtonContainerWithPseudoClass as any
   }, 
 
   props: { 
@@ -28,9 +28,17 @@ export default defineComponent({
   data () {
     return { 
       pButton:{
-        buttonHoverColor   : '#2196F3',
-        checkboxRadiobuttonColor       : '#2196F3',
-        generalCheckBoxRadioButtonHoverBorderColor        : '#2196F3',
+        checkBoxHoverColor:'#0b7ad1',
+        checkBoxBorderHoverColor:'#2196F3',
+        checkBoxClickedHoverColor:'#0b7ad1',
+        
+
+        radioButtonHoverColor:'#0b7ad1',
+        radioButtonHoverBorderColor:'#2196F3',
+        radioButtonClickedHoverColor:'#0b7ad1',
+        //buttonHoverColor   : '#2196F3',
+        //checkboxRadiobuttonColor       : '#2196F3',
+        //generalCheckBoxRadioButtonHoverBorderColor        : '#2196F3',
       },
     }
   },
@@ -54,7 +62,7 @@ export default defineComponent({
             />
             </template>
             <template #container>
-              <buttonContainerWithPseudoClass/>
+              <checkboxRadioButtonContainerWithPseudoClass/>
             </template>
         </baseStep>
     </div>

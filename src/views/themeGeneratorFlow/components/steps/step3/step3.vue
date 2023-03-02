@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import baseStep from "../baseStep/baseStep.vue";
-import buttonContainerWithoutPseudoClass from "./components/buttonContainerWithoutPseudoClass.vue";
+import checkboxRadioButtonContainerWithoutPseudoClass from "./components/checkboxRadioButtonContainerWithoutPseudoClass.vue";
 import ColorPickerInput from "@/components/pickers/components/ColorPickerInput.vue";
 const name = 'step3'
 
@@ -10,7 +10,7 @@ export default defineComponent({
 
   components: { 
     baseStep : baseStep as any,
-    buttonContainerWithoutPseudoClass: buttonContainerWithoutPseudoClass as any,
+    checkboxRadioButtonContainerWithoutPseudoClass: checkboxRadioButtonContainerWithoutPseudoClass as any,
     ColorPickerInput: ColorPickerInput as any
   }, 
 
@@ -28,14 +28,15 @@ export default defineComponent({
   data () {
     return { 
       pButton:{
-        buttonColor   : '#2196F3',
-        buttonBorderColor :'2196F3',
+        // buttonColor   : '#2196F3',
+        // buttonBorderColor :'2196F3',
         checkboxColor : '#2196F3',
-        checkBoxSelectedBorderColor:'#2196F3',
-        radioButtonSelectedBorderColor:'#2196F3',
         checkboxBorderColor : '#ced4da',
+        checkBoxClickedUnfocusBorderColor: '#2196F3',
+        
         radioButtonColor:'#2196F3',
         radiobuttonBorderColor : '#ced4da',
+        radioButtonClickedUnfocusBorderColor:'#2196F3',
       },
     }
   },
@@ -59,7 +60,7 @@ export default defineComponent({
             />
             </template>
             <template #container>
-                <buttonContainerWithoutPseudoClass/>
+                <checkboxRadioButtonContainerWithoutPseudoClass/>
             </template>
         </baseStep>
     </div>
