@@ -28,8 +28,6 @@ export default defineComponent({
   data () {
     return { 
       pButton:{
-        // buttonColor   : '#2196F3',
-        // buttonBorderColor :'2196F3',
         checkboxColor : '#2196F3',
         checkboxBorderColor : '#ced4da',
         checkBoxClickedUnfocusBorderColor: '#2196F3',

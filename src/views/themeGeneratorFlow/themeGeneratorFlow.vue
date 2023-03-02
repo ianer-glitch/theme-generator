@@ -4,6 +4,8 @@ import step1 from "./components/steps/step1/step1.vue";
 import step2 from "./components/steps/step2/step2.vue";
 import step3 from "./components/steps/step3/step3.vue";
 import step4 from "./components/steps/step4/step4.vue"
+import step5 from "./components/steps/step5/step5.vue";
+import step6 from "./components/steps/step6/step6.vue";
 const name = "AboutView";
 
 export default defineComponent({
@@ -14,6 +16,8 @@ export default defineComponent({
     step2: step2 as any,
     step3: step3 as any,
     step4: step4 as any,
+    step5: step5 as any,
+    step6: step6 as any,
 },
 
   props: {},
@@ -127,12 +131,12 @@ export default defineComponent({
           :index="3"
           v-if="index === 3" 
           @index="index  = $event" 
-          @buttonColor    = " buttonColor = $event "
+         
           @checkboxBorderColor = "checkboxBorderColor = $event"
           @radiobuttonBorderColor="radiobuttonBorderColor = $event"
           @checkboxColor = "checkboxColor = $event"
           @radioButtonColor = "radioButtonColor = $event"
-          @buttonBorderColor = "buttonBorderColor =$event"
+          
           @checkBoxClickedUnfocusBorderColor = "checkBoxClickedUnfocusBorderColor = $event"
           @radioButtonClickedUnfocusBorderColor = "radioButtonClickedUnfocusBorderColor = $event"
 
@@ -142,7 +146,8 @@ export default defineComponent({
           <step4 
           :index="4"
           @index="index  = $event"
-          @buttonHoverColor = "buttonHoverColor = $event"
+          v-if="index === 4" 
+         
           @checkBoxBorderHoverColor = "checkBoxBorderHoverColor = $event"
           @checkBoxClickedHoverColor = "checkBoxClickedHoverColor =$event"
           @checkBoxHoverColor="checkBoxHoverColor = $event"
@@ -154,12 +159,25 @@ export default defineComponent({
           @generalCheckBoxRadioButtonHoverBorderColor = "generalCheckBoxRadioButtonHoverBorderColor = $event"
           
           
-          v-if="index === 4" 
           />
      </KeepAlive>
-    </div>
-    <div class="buttons">
-
+     <KeepAlive> 
+       <step5 
+          :index="5"
+          v-if="index === 5" 
+          @index="index  = $event" 
+          @buttonColor    = " buttonColor = $event "
+          @buttonBorderColor = "buttonBorderColor =$event"
+          />
+      </KeepAlive>
+      <KeepAlive>
+        <step6 
+          :index                   = "6"
+          v-if                   = "index === 6"
+          @index                 = "index  = $event"
+          @buttonHoverColor = "buttonHoverColor = $event"
+        />
+      </KeepAlive>
     </div>
   </div>
 </template>

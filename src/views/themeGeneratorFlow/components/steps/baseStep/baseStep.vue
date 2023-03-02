@@ -26,7 +26,7 @@ export default defineComponent({
   data () {
     return { 
       
-      totalSteps:4,
+      totalSteps:6,
     }
   },
 
