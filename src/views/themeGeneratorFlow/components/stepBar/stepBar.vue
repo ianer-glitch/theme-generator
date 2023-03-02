@@ -56,7 +56,7 @@ export default defineComponent({
     height: 80px;
     background-color: #E5BA73;
     border-radius: 8px;
-    gap:10%;
+    gap:8%;
 }
 .ball-focused{
   width: 15px;

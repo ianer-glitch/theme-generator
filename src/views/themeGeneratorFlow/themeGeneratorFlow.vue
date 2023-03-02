@@ -3,9 +3,13 @@ import { defineComponent } from "vue";
 import step1 from "./components/steps/step1/step1.vue";
 import step2 from "./components/steps/step2/step2.vue";
 import step3 from "./components/steps/step3/step3.vue";
-import step4 from "./components/steps/step4/step4.vue"
+import step4 from "./components/steps/step4/step4.vue";
 import step5 from "./components/steps/step5/step5.vue";
 import step6 from "./components/steps/step6/step6.vue";
+import step7 from "./components/steps/step7/step7.vue";
+import step8 from "./components/steps/step8/step8.vue";
+import step9 from "./components/steps/step9/step9.vue";
+
 const name = "AboutView";
 
 export default defineComponent({
@@ -18,6 +22,9 @@ export default defineComponent({
     step4: step4 as any,
     step5: step5 as any,
     step6: step6 as any,
+    step7: step7 as any,
+    step8: step8 as any,
+    step9: step9 as any,
 },
 
   props: {},
@@ -95,6 +102,22 @@ export default defineComponent({
       checkBoxBorderHoverColor:null,
       radioButtonHoverBorderColor:null,
       radioButtonClickedHoverColor:null,
+      buttonActiveAndFocusColor:null,
+      buttonActiveAndFocusBorderColor:null,
+      buttonHoverBorderColor:null,
+      h1FontColor:null,
+      h2FontColor:null,
+      h3FontColor:null,
+      h4FontColor:null,
+      h5FontColor:null,
+      h6FontColor:null,
+      pFontColor:null,
+      h1FontSize:null,
+      h2FontSize:null,
+      h3FontSize:null,
+      h4FontSize:null,
+      h5FontSize:null,
+      h6FontSize:null,
       }
   },
 
@@ -176,6 +199,43 @@ export default defineComponent({
           v-if                   = "index === 6"
           @index                 = "index  = $event"
           @buttonHoverColor = "buttonHoverColor = $event"
+          @buttonHoverBorderColor = "buttonHoverBorderColor = $event"
+        />
+      </KeepAlive>
+      <KeepAlive>
+        <step7 
+          :index                   = "7"
+          v-if                   = "index === 7"
+          @index                 = "index  = $event"
+          @buttonActiveAndFocusColor = "buttonActiveAndFocusColor = $event"
+          @buttonActiveAndFocusBorderColor="buttonActiveAndFocusBorderColor = $event"
+        />
+      </KeepAlive>
+      <KeepAlive>
+        <step8 
+          :index                   = "8"
+          v-if                   = "index === 8"
+          @index                 = "index  = $event"
+          @h1FontColor = "h1FontColor = $event"
+          @h2FontColor = "h2FontColor = $event"
+          @h3FontColor = "h3FontColor = $event"
+          @h4FontColor = "h4FontColor = $event"
+          @h5FontColor = "h5FontColor = $event"
+          @h6FontColor = "h6FontColor = $event"
+          @pFontColor= "pFontColor = $event"
+        />
+      </KeepAlive>
+      <KeepAlive>
+        <step9 
+          :index                   = "9"
+          v-if                   = "index === 9"
+          @index                 = "index  = $event"
+          @h1FontSize = "h1FontSize = $event"
+          @h2FontSize = "h2FontSize = $event"
+          @h3FontSize = "h3FontSize = $event"
+          @h4FontSize = "h4FontSize = $event"
+          @h5FontSize = "h5FontSize = $event"
+          @h6FontSize = "h6FontSize = $event"
         />
       </KeepAlive>
     </div>
@@ -364,8 +424,8 @@ html,body{
   --cor-85:v-bind('pButtonInfoHoverBackgroundColor');
   --cor-32:v-bind('pButtonInfoActiveAndFocusBackgroundColor');
   --cor-20:v-bind('pButtonActiveAndFocusBackgroundColor');
-  --cor-1 :v-bind('buttonHoverColor');
-  --cor-5 :v-bind('buttonColor');
+  --cor-1 :#0d89ec;
+  --cor-5 :#2196F3;
   --cor-59:v-bind('pButtonTextHoverBackgroundColor');
   --cor-60:v-bind('pButtonTextActiveAndFocusBackgroundColor');
   --cor-7 :v-bind('pButtonSecondaryBackgroundColor');
@@ -459,19 +519,54 @@ html,body{
   --radioButtonHoverColor:v-bind('radioButtonHoverColor');
   --radioButtonHoverBorderColor:v-bind('radioButtonHoverBorderColor');
   --radioButtonClickedHoverColor:v-bind('radioButtonClickedHoverColor');
-
-  
-  
-  
-
-  
-  
-
-  
-  
+  --buttonActiveAndFocusColor:v-bind('buttonActiveAndFocusColor');
+  --buttonActiveAndFocusBorderColor:v-bind('buttonActiveAndFocusBorderColor');
+  --buttonHoverColor:v-bind('buttonHoverColor');
+  --buttonHoverBorderColor:v-bind('buttonHoverBorderColor');
+  --buttonColor:v-bind('buttonColor');
+  --h1FontColor:v-bind('h1FontColor');
+  --h2FontColor:v-bind('h2FontColor');
+  --h3FontColor:v-bind('h3FontColor');
+  --h4FontColor:v-bind('h4FontColor');
+  --h5FontColor:v-bind('h5FontColor');
+  --h6FontColor:v-bind('h6FontColor');
+  --pFontColor:v-bind('pFontColor');  
+  --h1FontSize:v-bind('h1FontSize');
+  --h2FontSize:v-bind('h2FontSize');
+  --h3FontSize:v-bind('h3FontSize');
+  --h4FontSize:v-bind('h4FontSize');
+  --h5FontSize:v-bind('h5FontSize');
+  --h6FontSize:v-bind('h6FontSize');
 }
 
-.p-autocomplete .p-autocomplete-loader {
+h1.primary-title{
+ color: var(--h1FontColor);;
+ font-size: var(--h1FontSize);
+}
+h2.secondary-title{
+  color:var(--h2FontColor);
+  font-size: var(--h2FontSize);
+}
+h3.third-title{
+  color:var(--h3FontColor);
+  font-size: var(--h3FontSize);
+}
+h4.fourth-title{
+  color:var(--h4FontColor);
+  font-size: var(--h4FontSize);
+}
+h5.fifth-title{
+  color:var(--h5FontColor);
+  font-size: var(--h5FontSize);
+}
+h6.sixth-title{
+  color:var(--h6FontColor);
+  font-size: var(--h6FontSize);
+}
+p.paragraph{
+  color:var(--pFontColor)
+}
+.p-autocomplete .p-autocomplete-loader {  
   right: 0.5rem;
 }
 .p-autocomplete.p-autocomplete-dd .p-autocomplete-loader {
@@ -1939,7 +2034,7 @@ html,body{
 
 .p-button {
   color: var(--cor-10);
-  background: var(--cor-5);
+  background: var(--buttonColor);
   border: 1px solid var(--cor-98);
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -1947,14 +2042,14 @@ html,body{
   border-radius: 3px;
 }
 .p-button:enabled:hover {
-  background: var(--cor-1);
+  background: var(--buttonHoverColor);
   color: var(--cor-10);
-  border-color: var(--cor-1);
+  border-color: var(--buttonHoverBorderColor);
 }
 .p-button:enabled:active {
-  background: var(--cor-20);
+  background: var(--buttonActiveAndFocusColor);
   color: var(--cor-10);
-  border-color: var(--cor-20);
+  border-color: var(--buttonActiveAndFocusBorderColor);
 }
 .p-button.p-button-outlined {
   background-color: transparent;

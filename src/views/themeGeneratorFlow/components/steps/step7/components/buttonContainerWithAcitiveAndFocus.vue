@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-const name = 'buttonContainerWithHover'
+const name = 'buttonContainerWithAcitiveAndFocus'
 
 export default defineComponent({
   name,
@@ -41,7 +41,6 @@ export default defineComponent({
   gap:15px;
   align-items: center;
   justify-content: center;
-  
 }
 
 .with-pseudoclass{
@@ -51,13 +50,16 @@ export default defineComponent({
   justify-content: center;
   gap:10px;
 }
-:deep(.p-button){
-  background: var(--buttonHoverColor);
-  color:var(--cor-10);
-  border-color:var(--buttonHoverBorderColor); 
-  border:1px solid var(--buttonHoverBorderColor);
-}
 .button{
-  width: 100%;
+    width: 100%;
+}
+:deep(.p-button){
+  background: var(--buttonActiveAndFocusColor);
+  color:var(--cor-10);
+  border-color:var(--buttonActiveAndFocusBorderColor); 
+  
+  outline:none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0.2rem var(--cor-4);
 }
 </style>

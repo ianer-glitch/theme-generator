@@ -2,19 +2,19 @@
 import { defineComponent } from "vue";
 import baseStep from "../baseStep/baseStep.vue";
 import ColorPickerInput from "@/components/pickers/components/ColorPickerInput.vue";
-import buttonContainerWithHover from "./components/buttonContainerWithHover.vue";
+import textContainer from "./components/textContainer.vue";
 
-const name = 'step6'
+
+const name = 'step8'
 
 export default defineComponent({
   name,
 
-  components: { 
-    baseStep : baseStep as any,
-    ColorPickerInput: ColorPickerInput as any,
-    buttonContainerWithHover: buttonContainerWithHover as any,
-    
-  }, 
+  components: {
+    baseStep: baseStep as any,
+     ColorPickerInput:  ColorPickerInput as any,
+    textContainer :  textContainer as any,
+}, 
 
   props: { 
     index:{
@@ -29,9 +29,14 @@ export default defineComponent({
 
   data () {
     return { 
-      pButton:{
-        buttonHoverColor   : '#0d89ec',
-        buttonHoverBorderColor: '#0d89ec',
+      colors:{
+        h1FontColor:'#495057',                 
+        h2FontColor:'#495057',
+        h3FontColor:'#495057', 
+        h4FontColor:'#495057',
+        h5FontColor:'#495057',
+        h6FontColor:'#495057',
+        pFontColor :'#495057',
       },
     }
   },
@@ -47,7 +52,7 @@ export default defineComponent({
     <div>
         <baseStep @index = "$emit('index',$event)" :index = "index">
           <template #control-panel>
-            <colorPickerInput v-for="(color,colorName)  in  pButton"
+            <colorPickerInput v-for="(color,colorName)  in  colors"
               :defaultColor="color"
               @change="$emit(colorName,$event)"
               @mounted="$emit(colorName,$event)"
@@ -55,7 +60,7 @@ export default defineComponent({
             />
             </template>
             <template #container>
-             <buttonContainerWithHover/>
+              <textContainer/>
             </template>
         </baseStep>
     </div>

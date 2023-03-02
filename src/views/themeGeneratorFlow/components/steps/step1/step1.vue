@@ -27,13 +27,11 @@ export default defineComponent({
 
   data () {
     return { 
-      generalConfig:{
+    generalConfig:{
         inputBackgroundColor : '#ffffff',
         inputBorderColor     : '#ced4da',
         inputPlaceholderColor: '#6f7d6c',
         inputTextColor       : '#495057',
-        
-      
       },
     }
   },

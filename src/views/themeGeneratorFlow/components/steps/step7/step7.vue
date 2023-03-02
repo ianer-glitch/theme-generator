@@ -2,9 +2,9 @@
 import { defineComponent } from "vue";
 import baseStep from "../baseStep/baseStep.vue";
 import ColorPickerInput from "@/components/pickers/components/ColorPickerInput.vue";
-import buttonContainerWithHover from "./components/buttonContainerWithHover.vue";
+import buttonContainerWithAcitiveAndFocus from "./components/buttonContainerWithAcitiveAndFocus.vue";
 
-const name = 'step6'
+const name = 'step7'
 
 export default defineComponent({
   name,
@@ -12,7 +12,7 @@ export default defineComponent({
   components: { 
     baseStep : baseStep as any,
     ColorPickerInput: ColorPickerInput as any,
-    buttonContainerWithHover: buttonContainerWithHover as any,
+    buttonContainerWithAcitiveAndFocus: buttonContainerWithAcitiveAndFocus as any,
     
   }, 
 
@@ -30,8 +30,8 @@ export default defineComponent({
   data () {
     return { 
       pButton:{
-        buttonHoverColor   : '#0d89ec',
-        buttonHoverBorderColor: '#0d89ec',
+        buttonActiveAndFocusColor:'#0b7ad1',
+        buttonActiveAndFocusBorderColor: '#0b7ad1',
       },
     }
   },
@@ -55,7 +55,7 @@ export default defineComponent({
             />
             </template>
             <template #container>
-             <buttonContainerWithHover/>
+             <buttonContainerWithAcitiveAndFocus/>
             </template>
         </baseStep>
     </div>
