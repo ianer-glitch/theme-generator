@@ -65,7 +65,7 @@ export default defineComponent({
 
 <template>
   <main class="color-picker">
-    <p>{{returnLabel()}}</p> 
+    <p class="label">{{returnLabel()}}</p> 
     <div class="input-group">
       <PInputText @change="emitText" :placeholder="defaultColor" class="input" v-model="color"/>
       <PButton @click="color = defaultColor ; $emit('change', `${color}`)" icon="pi pi-refresh" class="p-button-rounded p-button-secondary p-button-text" />
@@ -91,7 +91,9 @@ export default defineComponent({
   width:fit-content;
     
 }
-
+.label{
+  color:#744c1b;
+}
 .input{
   width: 100%;
 }

@@ -62,7 +62,7 @@ export default defineComponent({
                 :label="propName"
                 :min="0"
                 :max="25"
-                :size="100"
+                :size="60"
                 :defaultValue="value"
                 @change="$emit(propName,$event)"
                 @mounted="$emit(propName,$event)"

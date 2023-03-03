@@ -43,7 +43,14 @@ export default defineComponent({
     }
   },
 
-  methods: { },
+  methods: { 
+    returnLabel(){
+      let tempLabel = this.label
+      const result = tempLabel.replace(/([A-Z])/g ," $1")
+      const finalResult = result.charAt(0).toUpperCase() + result.slice(1)
+      return finalResult
+    },
+  },
 
   computed: { }, 
 
@@ -51,9 +58,13 @@ export default defineComponent({
 </script>
 
 <template>
-    <div>
-      <label>{{label}}</label>
-      <PKnob 
+      
+    <div class="container">
+
+      <label class="label">{{returnLabel()}}</label>
+      <PButton @click="value = defaultValue ; $emit('change', value)" icon="pi pi-refresh" class="p-button-rounded p-button-secondary p-button-text" />
+      <div >
+        <PKnob 
               v-model="value" 
               :min="min" 
               :max="max"
@@ -62,11 +73,25 @@ export default defineComponent({
               rangeColor="#F0F0F0" 
               :size="size"
               @change="$emit('change',value)"
-          />
+        />
+      </div>
+      
     </div>
 </template>
 
 
 <style scoped>
-
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width:100%;
+  text-align: left;
+  word-wrap: break-word;
+  padding:5px;
+}
+.label{
+  color:#744c1b;
+}
 </style>

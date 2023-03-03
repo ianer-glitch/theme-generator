@@ -215,23 +215,9 @@ export default defineComponent({
         />
       </KeepAlive>
       <KeepAlive>
-        <step8 
+        <step8
           :index                   = "8"
           v-if                   = "index === 8"
-          @index                 = "index  = $event"
-          @h1FontColor = "h1FontColor = $event"
-          @h2FontColor = "h2FontColor = $event"
-          @h3FontColor = "h3FontColor = $event"
-          @h4FontColor = "h4FontColor = $event"
-          @h5FontColor = "h5FontColor = $event"
-          @h6FontColor = "h6FontColor = $event"
-          @pFontColor= "pFontColor = $event"
-        />
-      </KeepAlive>
-      <KeepAlive>
-        <step9 
-          :index                   = "9"
-          v-if                   = "index === 9"
           @index                 = "index  = $event"
           @h1FontSize = "h1FontSize = `${$event}pt`"
           @h2FontSize = "h2FontSize = `${$event}pt`"
@@ -242,6 +228,21 @@ export default defineComponent({
           @pFontSize="pFontSize = `${$event}pt`"
         />
       </KeepAlive>
+      <KeepAlive>
+        <step9 
+          :index                   = "9"
+          v-if                   = "index === 9"
+          @index                 = "index  = $event"
+          @h1FontColor = "h1FontColor = $event"
+          @h2FontColor = "h2FontColor = $event"
+          @h3FontColor = "h3FontColor = $event"
+          @h4FontColor = "h4FontColor = $event"
+          @h5FontColor = "h5FontColor = $event"
+          @h6FontColor = "h6FontColor = $event"
+          @pFontColor= "pFontColor = $event"
+        />
+      </KeepAlive>
+      
     </div>
   </div>
 </template>
@@ -548,30 +549,44 @@ html,body{
 h1.primary-title{
  color: var(--h1FontColor);
  font-size: var(--h1FontSize);
+ padding:0;
+ margin: 0;
 }
 h2.secondary-title{
   color:var(--h2FontColor);
   font-size: var(--h2FontSize);
+  padding:0;
+ margin: 0;
 }
 h3.third-title{
   color:var(--h3FontColor);
   font-size: var(--h3FontSize);
+  padding:0;
+ margin: 0;
 }
 h4.fourth-title{
   color:var(--h4FontColor);
   font-size: var(--h4FontSize);
+  padding:0;
+ margin: 0;
 }
 h5.fifth-title{
   color:var(--h5FontColor);
   font-size: var(--h5FontSize);
+  padding:0;
+ margin: 0;
 }
 h6.sixth-title{
   color:var(--h6FontColor);
   font-size: var(--h6FontSize);
+  padding:0;
+ margin: 0;
 }
 p.paragraph{
   color:var(--pFontColor);
   font-size: var(--pFontSize);
+  padding:0;
+  margin: 0;
 }
 .p-autocomplete .p-autocomplete-loader {  
   right: 0.5rem;

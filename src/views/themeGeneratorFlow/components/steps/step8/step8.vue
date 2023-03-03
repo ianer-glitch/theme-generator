@@ -2,8 +2,8 @@
 import { defineComponent } from "vue";
 import baseStep from "../baseStep/baseStep.vue";
 import ColorPickerInput from "@/components/pickers/components/ColorPickerInput.vue";
-import textContainer from "./components/textContainer.vue";
-
+import textSizeContainer from "./components/textSizeContainer.vue";
+import knob from "@/components/knob/knob.vue";
 
 const name = 'step8'
 
@@ -13,7 +13,8 @@ export default defineComponent({
   components: {
     baseStep: baseStep as any,
      ColorPickerInput:  ColorPickerInput as any,
-    textContainer :  textContainer as any,
+    textSizeContainer :  textSizeContainer as any,
+    knob : knob as any,
 }, 
 
   props: { 
@@ -29,19 +30,20 @@ export default defineComponent({
 
   data () {
     return { 
-      colors:{
-        h1FontColor:'#495057',                 
-        h2FontColor:'#495057',
-        h3FontColor:'#495057', 
-        h4FontColor:'#495057',
-        h5FontColor:'#495057',
-        h6FontColor:'#495057',
-        pFontColor :'#495057',
+      sizes:{
+        h1FontSize:32,                 
+        h2FontSize:26,
+        h3FontSize:22, 
+        h4FontSize:20,
+        h5FontSize:18,
+        h6FontSize:16,
+        pFontSize :14,
       },
     }
   },
 
-  methods: { },
+  methods: {
+   },
 
   computed: { }, 
 
@@ -52,15 +54,19 @@ export default defineComponent({
     <div>
         <baseStep @index = "$emit('index',$event)" :index = "index">
           <template #control-panel>
-            <colorPickerInput v-for="(color,colorName)  in  colors"
-              :defaultColor="color"
-              @change="$emit(colorName,$event)"
-              @mounted="$emit(colorName,$event)"
-              :label="colorName"
-            />
+            <knob v-for="(size,sizeName) in sizes"
+                :label="sizeName"
+                :min="10"
+                :max="60"
+                :size="60"
+                :defaultValue="size"
+                @change="$emit(sizeName,$event)"
+                @mounted="$emit(sizeName,$event)"
+                />
+              
             </template>
             <template #container>
-              <textContainer/>
+              <textSizeContainer/>
             </template>
         </baseStep>
     </div>
