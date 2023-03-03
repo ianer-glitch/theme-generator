@@ -1025,7 +1025,7 @@ p.paragraph{
   background-color: var(--cor-18);
 }
 .p-input-filled .p-checkbox .p-checkbox-box.p-highlight {
-  background: var(--radioButtonHoverBorderColor);
+  background: var(--checkBoxBorderHoverColor);
 }
 .p-input-filled .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
   background-color: var(--cor-18);

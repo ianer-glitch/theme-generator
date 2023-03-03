@@ -31,14 +31,9 @@ export default defineComponent({
         checkBoxHoverColor:'#0b7ad1',
         checkBoxBorderHoverColor:'#2196F3',
         checkBoxClickedHoverColor:'#0b7ad1',
-        
-
         radioButtonHoverColor:'#0b7ad1',
         radioButtonHoverBorderColor:'#2196F3',
         radioButtonClickedHoverColor:'#0b7ad1',
-        
-        //checkboxRadiobuttonColor       : '#2196F3',
-        //generalCheckBoxRadioButtonHoverBorderColor        : '#2196F3',
       },
     }
   },
