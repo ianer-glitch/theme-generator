@@ -28,6 +28,7 @@ export default defineComponent({
     <div class="buttons">
       <div class="with-pseudoclass">
         <PButton label="Primary" class="button" />
+        <PButton label="Secondary" class="p-button-secondary button"  />
       </div>
     </div>
 </template>
@@ -41,6 +42,7 @@ export default defineComponent({
   gap:15px;
   align-items: center;
   justify-content: center;
+
   
 }
 
@@ -49,13 +51,20 @@ export default defineComponent({
   display: flex;
   align-items: center;
   justify-content: center;
-  gap:10px;
+  flex-direction: column;
+  gap:15px;
 }
 :deep(.p-button){
   background: var(--buttonHoverColor);
   color:var(--cor-10);
   border-color:var(--buttonHoverBorderColor); 
   border:1px solid var(--buttonHoverBorderColor);
+}
+:deep(.p-button.p-button-secondary, .p-buttonset.p-button-secondary > .p-button, .p-splitbutton.p-button-secondary > .p-button ){
+  background: var(--buttonSecondaryHoverColor);
+  color: var(--cor-10);
+  border-color: var(--buttonSecondaryHoverBorderColor);
+  border-radius: var(--buttonSecondaryBorderRadius);
 }
 .button{
   width: 100%;

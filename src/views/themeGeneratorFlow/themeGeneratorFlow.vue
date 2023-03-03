@@ -120,6 +120,11 @@ export default defineComponent({
       h6FontSize:'',
       pFontSize:'',
       buttonBorderRadius:'',
+      buttonSecondaryColor:null,
+      buttonSecondaryBorderColor:null,
+      buttonSecondaryBorderRadius:'',
+      buttonSecondaryHoverColor:null,
+      buttonSecondaryHoverBorderColor:null,
       }
   },
 
@@ -194,6 +199,11 @@ export default defineComponent({
           @buttonColor    = " buttonColor = $event "
           @buttonBorderColor = "buttonBorderColor =$event"
           @buttonBorderRadius = "buttonBorderRadius = `${$event}px`"
+
+          @buttonSecondaryColor    = " buttonSecondaryColor = $event "
+          @buttonSecondaryBorderColor = "buttonSecondaryBorderColor =$event"
+          @buttonSecondaryBorderRadius = "buttonSecondaryBorderRadius = `${$event}px`"
+
           />
       </KeepAlive>
       <KeepAlive>
@@ -203,6 +213,9 @@ export default defineComponent({
           @index                 = "index  = $event"
           @buttonHoverColor = "buttonHoverColor = $event"
           @buttonHoverBorderColor = "buttonHoverBorderColor = $event"
+
+          @buttonSecondaryHoverColor = "buttonSecondaryHoverColor = $event"
+          @buttonSecondaryHoverBorderColor = "buttonSecondaryHoverBorderColor = $event"
         />
       </KeepAlive>
       <KeepAlive>
@@ -543,7 +556,12 @@ html,body{
   --h5FontSize:v-bind('h5FontSize');
   --h6FontSize:v-bind('h6FontSize');
   --pFontSize:v-bind('pFontSize');
-  --buttonBorderRadius:v-bind('buttonBorderRadius')
+  --buttonBorderRadius:v-bind('buttonBorderRadius');
+  --buttonSecondaryColor:v-bind(' buttonSecondaryColor');
+  --buttonSecondaryBorderColor:v-bind('buttonSecondaryBorderColor');
+  --buttonSecondaryBorderRadius:v-bind('buttonSecondaryBorderRadius');
+  --buttonSecondaryHoverColor:v-bind('buttonSecondaryHoverColor');
+  --buttonSecondaryHoverBorderColor:v-bind('buttonSecondaryHoverBorderColor');
 }
 
 h1.primary-title{
@@ -2208,13 +2226,16 @@ p.paragraph{
 
 .p-button.p-button-secondary, .p-buttonset.p-button-secondary > .p-button, .p-splitbutton.p-button-secondary > .p-button {
   color: var(--cor-10);
-  background: var(--cor-7);
-  border: 1px solid var(--cor-7);
+  background: var(--buttonSecondaryColor);
+  border: 1px solid var(--buttonSecondaryBorderColor);
+  border-radius: var(--buttonSecondaryBorderRadius);
 }
+/* aaa */
 .p-button.p-button-secondary:enabled:hover, .p-buttonset.p-button-secondary > .p-button:enabled:hover, .p-splitbutton.p-button-secondary > .p-button:enabled:hover {
-  background: var(--cor-27);
+  background: var(--buttonSecondaryHoverColor);
   color: var(--cor-10);
-  border-color: var(--cor-27);
+  border-color: var(--buttonSecondaryHoverBorderColor);
+  border-radius: var(--buttonSecondaryBorderRadius);
 }
 .p-button.p-button-secondary:enabled:focus, .p-buttonset.p-button-secondary > .p-button:enabled:focus, .p-splitbutton.p-button-secondary > .p-button:enabled:focus {
   box-shadow: 0 0 0 0.2rem var(--cor-28);

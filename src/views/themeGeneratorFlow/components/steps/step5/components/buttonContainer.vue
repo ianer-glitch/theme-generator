@@ -30,6 +30,7 @@ export default defineComponent({
     <div class="without-pseudoclass">
         <div class="buttons">
             <PButton label="Primary" class="button"/>
+            <PButton label="Secondary" class="p-button-secondary button"  />
         </div>
     </div>
 </template>
@@ -48,6 +49,7 @@ export default defineComponent({
   height: 100%;
   width: 100%;
   gap:15px;
+  flex-direction: column;
   align-items: center;
  justify-content: center;
   

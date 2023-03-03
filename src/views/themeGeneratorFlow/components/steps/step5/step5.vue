@@ -33,10 +33,13 @@ export default defineComponent({
     return { 
       colors:{
         buttonColor   : '#2196F3',
-        buttonBorderColor :'2196F3',
+        buttonBorderColor :'#2196F3',
+        buttonSecondaryColor:'#607D8B',
+        buttonSecondaryBorderColor:'#607D8B'
       },
       radius:{
         buttonBorderRadius:3,
+        buttonSecondaryBorderRadius:3,
       }
     }
   },

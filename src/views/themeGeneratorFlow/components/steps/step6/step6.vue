@@ -32,6 +32,8 @@ export default defineComponent({
       pButton:{
         buttonHoverColor   : '#0d89ec',
         buttonHoverBorderColor: '#0d89ec',
+        buttonSecondaryHoverColor:'#56717d',
+        buttonSecondaryHoverBorderColor:'#56717d',
       },
     }
   },
