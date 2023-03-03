@@ -112,12 +112,14 @@ export default defineComponent({
       h5FontColor:null,
       h6FontColor:null,
       pFontColor:null,
-      h1FontSize:null,
-      h2FontSize:null,
-      h3FontSize:null,
-      h4FontSize:null,
-      h5FontSize:null,
-      h6FontSize:null,
+      h1FontSize:'',
+      h2FontSize:'',
+      h3FontSize:'',
+      h4FontSize:'',
+      h5FontSize:'',
+      h6FontSize:'',
+      pFontSize:'',
+      buttonBorderRadius:'',
       }
   },
 
@@ -191,6 +193,7 @@ export default defineComponent({
           @index="index  = $event" 
           @buttonColor    = " buttonColor = $event "
           @buttonBorderColor = "buttonBorderColor =$event"
+          @buttonBorderRadius = "buttonBorderRadius = `${$event}px`"
           />
       </KeepAlive>
       <KeepAlive>
@@ -230,12 +233,13 @@ export default defineComponent({
           :index                   = "9"
           v-if                   = "index === 9"
           @index                 = "index  = $event"
-          @h1FontSize = "h1FontSize = $event"
-          @h2FontSize = "h2FontSize = $event"
-          @h3FontSize = "h3FontSize = $event"
-          @h4FontSize = "h4FontSize = $event"
-          @h5FontSize = "h5FontSize = $event"
-          @h6FontSize = "h6FontSize = $event"
+          @h1FontSize = "h1FontSize = `${$event}pt`"
+          @h2FontSize = "h2FontSize = `${$event}pt`"
+          @h3FontSize = "h3FontSize = `${$event}pt`"
+          @h4FontSize = "h4FontSize = `${$event}pt`"
+          @h5FontSize = "h5FontSize = `${$event}pt`"
+          @h6FontSize = "h6FontSize = `${$event}pt`"
+          @pFontSize="pFontSize = `${$event}pt`"
         />
       </KeepAlive>
     </div>
@@ -537,10 +541,12 @@ html,body{
   --h4FontSize:v-bind('h4FontSize');
   --h5FontSize:v-bind('h5FontSize');
   --h6FontSize:v-bind('h6FontSize');
+  --pFontSize:v-bind('pFontSize');
+  --buttonBorderRadius:v-bind('buttonBorderRadius')
 }
 
 h1.primary-title{
- color: var(--h1FontColor);;
+ color: var(--h1FontColor);
  font-size: var(--h1FontSize);
 }
 h2.secondary-title{
@@ -564,7 +570,8 @@ h6.sixth-title{
   font-size: var(--h6FontSize);
 }
 p.paragraph{
-  color:var(--pFontColor)
+  color:var(--pFontColor);
+  font-size: var(--pFontSize);
 }
 .p-autocomplete .p-autocomplete-loader {  
   right: 0.5rem;
@@ -2039,7 +2046,7 @@ p.paragraph{
   padding: 0.5rem 1rem;
   font-size: 1rem;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
-  border-radius: 3px;
+  border-radius: var(--buttonBorderRadius);
 }
 .p-button:enabled:hover {
   background: var(--buttonHoverColor);

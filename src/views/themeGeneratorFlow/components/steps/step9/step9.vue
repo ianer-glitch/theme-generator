@@ -3,7 +3,7 @@ import { defineComponent } from "vue";
 import baseStep from "../baseStep/baseStep.vue";
 import ColorPickerInput from "@/components/pickers/components/ColorPickerInput.vue";
 import textSizeContainer from "./components/textSizeContainer.vue";
-import knob from "../step9/components/knob/knob.vue";
+import knob from "@/components/knob/knob.vue";
 
 const name = 'step9'
 
@@ -31,18 +31,19 @@ export default defineComponent({
   data () {
     return { 
       sizes:{
-        h1FontSize:'10',                 
-        h2FontSize:'10',
-        h3FontSize:'10', 
-        h4FontSize:'10',
-        h5FontSize:'10',
-        h6FontSize:'10',
-        pFontSize :'10',
+        h1FontSize:32,                 
+        h2FontSize:26,
+        h3FontSize:22, 
+        h4FontSize:20,
+        h5FontSize:18,
+        h6FontSize:16,
+        pFontSize :14,
       },
     }
   },
 
-  methods: { },
+  methods: {
+   },
 
   computed: { }, 
 
@@ -53,19 +54,16 @@ export default defineComponent({
     <div>
         <baseStep @index = "$emit('index',$event)" :index = "index">
           <template #control-panel>
-            <!-- <colorPickerInput v-for="(color,colorName)  in  colors"
-              :defaultColor="color"
-              @change="$emit(colorName,$event)"
-              @mounted="$emit(colorName,$event)"
-              :label="colorName"
-            /> -->
             <knob v-for="(size,sizeName) in sizes"
                 :label="sizeName"
                 :min="10"
-                :max="50"
+                :max="60"
+                :size="60"
+                :defaultValue="size"
                 @change="$emit(sizeName,$event)"
                 @mounted="$emit(sizeName,$event)"
                 />
+              
             </template>
             <template #container>
               <textSizeContainer/>

@@ -19,18 +19,27 @@ export default defineComponent({
     max:{
       type:Number,
       default:50
+    },
+    defaultValue:{
+      type:Number,
+      default:0
+    },
+    size:{
+      type:Number,
+      default:60
     }
   },
 
-  mounted () { 
-    this.$emit('mounted',this.size)
+  mounted () {
+    this.value=this.defaultValue
+    this.$emit('mounted',this.value)
   },
 
   updated () { },
 
   data () {
     return { 
-        size : 10
+        value : 10
     }
   },
 
@@ -45,13 +54,14 @@ export default defineComponent({
     <div>
       <label>{{label}}</label>
       <PKnob 
-              v-model="size" 
+              v-model="value" 
               :min="min" 
               :max="max"
               textColor="#495057"
               valueColor="#495057"
               rangeColor="#F0F0F0" 
-              @change="$emit('change',size)"
+              :size="size"
+              @change="$emit('change',value)"
           />
     </div>
 </template>
